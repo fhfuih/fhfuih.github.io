@@ -18,7 +18,7 @@
 	"Figure": {
 		"prefix": "figure",
 		"body": [
-			"{{<figure> src=\"$1\" alt=\"$2\" caption=\"$3\"$4}}$0"
+			"{{<figure src=\"$1\" alt=\"$2\" caption=\"$3\"$4>}}$0"
 		],
 		"description": "Figure"
 	}
