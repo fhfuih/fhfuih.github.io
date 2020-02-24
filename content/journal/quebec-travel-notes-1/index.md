@@ -1,7 +1,6 @@
 ---
 title: "魁北克省单人模式游记之一：Bonjour & Merci"
 date: 2020-02-23T18:51:58-05:00
-draft: true
 featured_image: images/quebec-travel-notes-1.jpg
 ---
 

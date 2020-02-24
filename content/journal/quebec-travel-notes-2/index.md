@@ -1,7 +1,6 @@
 ---
 title: "魁北克省单人模式游记之二：Detour"
 date: 2020-02-23T18:59:15-05:00
-draft: true
 featured_image: images/quebec-travel-notes-2.jpg
 ---
 

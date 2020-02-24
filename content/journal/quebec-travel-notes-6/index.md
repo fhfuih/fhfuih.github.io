@@ -1,7 +1,6 @@
 ---
 title: "魁北克省单人模式游记之六：Gare"
 date: 2020-02-23T19:04:33-05:00
-draft: true
 featured_image: images/quebec-travel-notes-6.jpg
 ---
 

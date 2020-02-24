@@ -1,7 +1,6 @@
 ---
 title: "魁北克省单人模式游记之三：Fermé"
 date: 2020-02-23T19:04:25-05:00
-draft: true
 featured_image: images/quebec-travel-notes-3.jpg
 ---
 
