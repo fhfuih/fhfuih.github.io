@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Journals on 一个不留意写的博客</title>
-    <link>/journal/</link>
+    <link>http://www.glitchso.me/journal/</link>
     <description>Recent content in Journals on 一个不留意写的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>一个不留意</copyright>
     <lastBuildDate>Sun, 23 Feb 2020 19:04:33 -0500</lastBuildDate>
     
-	<atom:link href="/journal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.glitchso.me/journal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>魁北克省单人模式游记之六：Gare</title>
-      <link>/journal/quebec-travel-notes-6/</link>
+      <link>http://www.glitchso.me/journal/quebec-travel-notes-6/</link>
       <pubDate>Sun, 23 Feb 2020 19:04:33 -0500</pubDate>
       
-      <guid>/journal/quebec-travel-notes-6/</guid>
+      <guid>http://www.glitchso.me/journal/quebec-travel-notes-6/</guid>
       <description>旅行的最后一天，实在是不知道还剩下什么景点了，于是睡了个懒觉，躺在床上使劲刷了会儿B站，又慢悠悠地吃了个早饭。忽然想起入住那晚，前台小哥哥为</description>
     </item>
     
     <item>
       <title>魁北克省单人模式游记之五：Hiver</title>
-      <link>/journal/quebec-travel-notes-5/</link>
+      <link>http://www.glitchso.me/journal/quebec-travel-notes-5/</link>
       <pubDate>Sun, 23 Feb 2020 19:04:30 -0500</pubDate>
       
-      <guid>/journal/quebec-travel-notes-5/</guid>
+      <guid>http://www.glitchso.me/journal/quebec-travel-notes-5/</guid>
       <description>魁北克城郊坐800路一个小时的地方，有一个叫做Montmorency Falls的瀑布，不知道是哪个旅行社给它起了一个闪亮的中文翻译“水晶瀑布</description>
     </item>
     
     <item>
       <title>魁北克省单人模式游记之四：Petit</title>
-      <link>/journal/quebec-travel-notes-4/</link>
+      <link>http://www.glitchso.me/journal/quebec-travel-notes-4/</link>
       <pubDate>Sun, 23 Feb 2020 19:04:28 -0500</pubDate>
       
-      <guid>/journal/quebec-travel-notes-4/</guid>
+      <guid>http://www.glitchso.me/journal/quebec-travel-notes-4/</guid>
       <description>青旅附近有一个叫Paillard的面包店，打着“第一可颂”的名号应该不会太差。9刀的可颂三明治套餐的确挺好吃，拿来当早饭可以吃的非常饱。其实</description>
     </item>
     
     <item>
       <title>魁北克省单人模式游记之三：Fermé</title>
-      <link>/journal/quebec-travel-notes-3/</link>
+      <link>http://www.glitchso.me/journal/quebec-travel-notes-3/</link>
       <pubDate>Sun, 23 Feb 2020 19:04:25 -0500</pubDate>
       
-      <guid>/journal/quebec-travel-notes-3/</guid>
+      <guid>http://www.glitchso.me/journal/quebec-travel-notes-3/</guid>
       <description>我出发之前查了蒙特利尔的未来一周天气，发现除了这一天有50%降水概率之外都是阴晴，而且气温也在-6度到0度之前摇摆。没想到今天早上出门吃早餐</description>
     </item>
     
     <item>
       <title>魁北克省单人模式游记之二：Detour</title>
-      <link>/journal/quebec-travel-notes-2/</link>
+      <link>http://www.glitchso.me/journal/quebec-travel-notes-2/</link>
       <pubDate>Sun, 23 Feb 2020 18:59:15 -0500</pubDate>
       
-      <guid>/journal/quebec-travel-notes-2/</guid>
+      <guid>http://www.glitchso.me/journal/quebec-travel-notes-2/</guid>
       <description>今天一早起来先去了昨天经过的一家Pegion Expresso Bar吃了点东西。它和两外两三家餐馆共用一栋楼，在黑色背景的墙上画上了非常好看的涂鸦，当时就被</description>
     </item>
     
     <item>
       <title>魁北克省单人模式游记之一：Bonjour &amp; Merci</title>
-      <link>/journal/quebec-travel-notes-1/</link>
+      <link>http://www.glitchso.me/journal/quebec-travel-notes-1/</link>
       <pubDate>Sun, 23 Feb 2020 18:51:58 -0500</pubDate>
       
-      <guid>/journal/quebec-travel-notes-1/</guid>
+      <guid>http://www.glitchso.me/journal/quebec-travel-notes-1/</guid>
       <description>由于功课做的太晚，在春假前两天才开始做准备，所有铁路票早就售罄（而且viarail网站也在维护，暂时不能网上订票），这次旅游只能窝在巴士上面</description>
     </item>
     
