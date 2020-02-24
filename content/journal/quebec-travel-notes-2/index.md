@@ -8,7 +8,7 @@ featured_image: images/quebec-travel-notes-2.jpg
 
 {{<figure src="pegion-espresso-bar.jpg" alt="Pegion Espresso Bar">}}
 
-上午本来打算去Old Port老港区参观一下，但是想到早餐质量欠佳，并且在Montréal的另一头有一个被好多网友mark的烟肉店Schwartz是下午1:30关门，便搭巴士过去体验一下。巴士票是昨天晚上闲逛的时候就有备而买的3-day pass，简单的除法告诉我们只要坐够六次交通工具就能赚回本。魁北克省的一大特色就是Poutine，于是我拒绝了服务员“烟肉三明治”的建议并点了烟肉Poutine[^1]。
+上午本来打算去Old Port老港区参观一下，但是想到早餐质量欠佳，并且在蒙特利尔的另一头有一个被好多网友mark的烟肉店Schwartz是下午1:30关门，便搭巴士过去体验一下。巴士票是昨天晚上闲逛的时候就有备而买的3-day pass，简单的除法告诉我们只要坐够六次交通工具就能赚回本。魁北克省的一大特色就是Poutine，于是我拒绝了服务员“烟肉三明治”的建议并点了烟肉Poutine[^1]。
 
 {{<figure src="schwartz.jpg" alt="Schwartz">}}
 
