@@ -3,15 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/journal/</loc>
+    <lastmod>2020-02-23T19:04:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-02-23T19:04:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/journal/quebec-travel-notes-6/</loc>
+    <lastmod>2020-02-23T19:04:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/journal/quebec-travel-notes-5/</loc>
+    <lastmod>2020-02-23T19:04:30-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/journal/quebec-travel-notes-4/</loc>
+    <lastmod>2020-02-23T19:04:28-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/journal/quebec-travel-notes-3/</loc>
+    <lastmod>2020-02-23T19:04:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/journal/quebec-travel-notes-2/</loc>
+    <lastmod>2020-02-23T18:59:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/journal/quebec-travel-notes-1/</loc>
+    <lastmod>2020-02-23T18:51:58-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
   </url>
   
   <url>
     <loc>/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
   </url>
   
 </urlset>
