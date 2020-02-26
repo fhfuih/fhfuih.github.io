@@ -9,3 +9,4 @@ baseURL: http://www.glitchso.me/
 
 params:
   subtitle: 旧文章正在迁移中……
+  favicon: favicon.ico
