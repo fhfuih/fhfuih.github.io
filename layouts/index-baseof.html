@@ -11,5 +11,9 @@
                 {{- block "main" . }}{{- end }}
         </main>
         {{ partial "footer/include.html" . }}
+
+        <footer>
+            {{- block "footer" . -}}{{ end }}
+        </footer>
     </body>
 </html>

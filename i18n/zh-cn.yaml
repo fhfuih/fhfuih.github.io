@@ -12,3 +12,9 @@ recentPosts:
   other: 最近文章
 friendLinks:
   other: 友链
+
+footer:
+    builtWith:
+        other: 由 {{ .Generator }} 驱动
+    designedBy:
+        other: 基于 {{ .DesignedBy }} 的 {{ .Theme }} 主题设计

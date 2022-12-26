@@ -12,3 +12,9 @@ recentPosts:
   other: Recent Posts
 friendLinks:
   other: Friend Links
+
+footer:
+    builtWith:
+        other: Built with {{ .Generator }}
+    designedBy:
+        other: Based on {{ .DesignedBy }}'s {{ .Theme }} Theme

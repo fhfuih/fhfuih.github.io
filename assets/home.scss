@@ -1,6 +1,26 @@
 @import '../themes/stack/assets/scss/breakpoints.scss';
 
+:root {
+    --link-shadow: 0px -0.3em 0px rgba(var(--link-background-color), var(--link-background-opacity-hover)) inset;
+    --footer-background-color: #03111f;
+    --footer-text-color: #fff;
+    &:not([data-scheme="dark"]) {
+        --body-text-color: #000;
+    }
+    &[data-scheme="dark"] {
+        --footer-background-color: #252525;
+    }
+}
+
 body.home {
+    color: var(--body-text-color);
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--accent-color);
+    }
+    a.link:hover {
+        box-shadow: var(--link-shadow);
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -231,7 +251,8 @@ body.home {
         }
         &>a:hover .card-title {
             color: var(--accent-color-darker);
-            box-shadow: 0px -10px 0px rgba(var(--link-background-color), var(--link-background-opacity-hover)) inset;
+            box-shadow: var(--link-shadow);
+
         }
 
         .card-header-img {
@@ -321,6 +342,20 @@ body.home {
     .person-name {
         margin:0 8px;
         line-height: 1.375em;
+    }
+
+    // Footer
+    footer {
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.75;
+        padding: 1rem 0;
+        background-color: var(--footer-background-color);
+        color: var(--footer-text-color);
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
     }
 
     // More normalizations
