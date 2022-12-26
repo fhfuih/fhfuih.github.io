@@ -1,3 +1,10 @@
+---
+title: "整理因conda和pip混用导致混乱的python环境"
+date: 2022-04-04T19:50:4408:00
+draft: true
+lang: zh-cn
+---
+
 [Using pip in a conda environment](https://www.anaconda.com/blog/using-pip-in-a-conda-environment)
 
 `conda update --all`解决conda inconsistencies。可能需要多跑几次、同时密切观察它提示的inconsistencies和应对操作是什么，直到这条命令就返回一句`# All requested packages already installed.`。如果发现重跑到后面一直在兜圈圈，建议重装conda吧。
