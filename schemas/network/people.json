@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "type": "object",
+    "additionalProperties": {
+        "type": "object",
+        "properties": {
+            "given": {
+                "type": "string"
+            },
+            "family": {
+                "type" : "string"
+            },
+            "url": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "img": {
+                "type": "string"
+            },
+            "me": {
+                "type": "boolean"
+            }
+        },
+        "required": [
+            "given",
+            "family"
+        ],
+        "additionalItems": false
+    }
+}

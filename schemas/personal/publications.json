@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "short": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "venue": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 2017,
+          "maximum": 3000
+        },
+        "img": {
+          "type": "string"
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "doi": {
+              "type": "string"
+            },
+            "code": {
+              "type": "string"
+            },
+            "presentation": {
+              "type": "string"
+            },
+            "pdf": {
+              "type": "string"
+            },
+            "project": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "title",
+        "short",
+        "authors",
+        "venue",
+        "year",
+        "links"
+      ]
+    }
+  }

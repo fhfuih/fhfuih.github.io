@@ -1,0 +1,17 @@
+- title: 'HKUST Course Monitor'
+  description: >
+    A scraper & visualizer of course quota changes at HKUST
+    (on an Oracle PeopleSoft Student Record deployment)
+    during past add-and-drop periods.
+  img: projects/course-monitor.jpg
+  links:
+    project: https://ustcourse.me/
+    code: https://github.com/fhfuih/Course-Monitor-Web
+- title: 'UST::parser'
+  description: >
+    A minimalism re-imagination of campus navigation page
+    and start page for HKUST students.
+  img: projects/ust-parser.jpg
+  links:
+    project: https://zhuangbi.student.ust.hk/ust-parser/
+    code: https://github.com/fhfuih/ust-parser

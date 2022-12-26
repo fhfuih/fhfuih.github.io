@@ -1,0 +1,10 @@
+{{/*  Accept a name key family|given */}}
+{{- $p := index site.Data.network.people . -}}
+{{- $fullname := (printf "%s %s" $p.given $p.family) -}}
+{{- if $p.me -}}
+<a href="{{or $p.url (absLangURL ``) }}" class="me link">{{ $fullname }}</a>
+{{- else if $p.url -}}
+<a href="{{$p.url}}" class="link">{{ $fullname }}</a>
+{{- else -}}
+<span>{{ $fullname }}</span>
+{{- end -}}

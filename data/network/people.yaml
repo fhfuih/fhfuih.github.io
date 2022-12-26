@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../schemas/network/people.json
+huang|zeyu:
+  given: Zeyu
+  family: Huang
+  mother: 黄泽宇
+  me: true
+ma|xiaojuan:
+  given: Xiaojuan
+  family: Ma
+  url: https://www.cse.ust.hk/~mxj/
+kang|youwen:
+  given: Youwen
+  family: Kang
+sun|zhida:
+  given: Zhida
+  family: Sun
+  url: https://zhdsun.github.io
+wang|sitong:
+  given: Sitong
+  family: Wang
+wu|ziming:
+  given: Ziming
+  family: Wu
+  url:
+liu|chengzhong:
+  given: Chengzhong
+  family: Liu
+  url:
+liu|dingdong:
+  given: Dingdong
+  family: Liu
+  url:
+zhou|shixu:
+  given: Shixu
+  family: Zhou
+  url:
+peng|zhenhui:
+  given: Zhenhui
+  family: Peng
+  url:
+yu|yue:
+  given: Yue
+  family: Yu
+  mother: 虞越
+  url: http://yyubv.student.ust.hk
+  avatar: people/yuyue.jpg
+xu|yanbo:
+  given: Yanbo
+  family: Xu
+  mother: 徐彦博
+  url: https://yanbo-xu.netlify.app

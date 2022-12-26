@@ -1,12 +1,41 @@
-theme: diary
-languageCode: zh-cn
-defaultContentLanguage: cn
-hasCJKLanguage: true
-languageName: 简体中文
-title: 一个不留意写的博客
-copyright: 一个不留意
-baseURL: http://www.glitchso.me/
+theme: stack
+baseURL: https://fhfuih.github.io
+copyright: HUANG Zeyu (黄泽宇)
+
+defaultContentLanguage: zh-cn
+languages:
+  en:
+    languageName: English
+    hasCJKLanguage: false
+    title: HUANG Zeyu's Website
+  zh-cn:
+    languageName: 简体中文
+    hasCJKLanguage: true
+    title: 黄泽宇的个人网站
+    copyright: 黄泽宇（HUANG Zeyu）
+
+menu:
+  social:
+    - name: GitHub
+      url: https://github.com/fhfuih
+      params:
+        icon: brand-github
+        # newTab: false
 
 params:
-  subtitle: 旧文章正在迁移中……
   favicon: favicon.ico
+  mainSections:
+  - blog
+  sidebar:
+    avatar:
+      local: true
+      src: avatar.jpg
+  featuredImageField: featured_image
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# debug
+enableMissingTranslationPlaceholders: true

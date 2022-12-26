@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="{{ default `ltr` .Language.LanguageDirection }}">
+    <head>
+        {{- partial "head/head.html" . -}}
+        {{- block "head" . -}}{{ end }}
+    </head>
+    <body class="home">
+        {{- partial "head/colorScheme" . -}}
+
+        <main class="container compact">
+                {{- block "main" . }}{{- end }}
+        </main>
+        {{ partial "footer/include.html" . }}
+    </body>
+</html>
