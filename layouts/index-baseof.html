@@ -7,6 +7,10 @@
     <body class="home">
         {{- partial "head/colorScheme" . -}}
 
+        <header>
+            {{- block "header" . -}}{{ end }}
+        </header>
+
         <main class="container compact">
                 {{- block "main" . }}{{- end }}
         </main>

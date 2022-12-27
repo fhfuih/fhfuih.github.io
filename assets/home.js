@@ -1,26 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* Email collapse */
-    /** @type HTMLButtonElement */
-    const mailButtonEl = document.getElementById('email-button')
-    /** @type HTMLSpanElement */
-    const emailEl = document.getElementById('email')
+    for (const e of document.getElementsByClassName('transition')) {
+        if (!e.classList.contains('in'))
+            e.classList.add('out')
+    }
 
-    mailButtonEl.addEventListener('click', () => {
-        const isCurrentlyActive = mailButtonEl.getAttribute('aria-expanded') == 'true'
-        if (isCurrentlyActive) {
-            mailButtonEl.setAttribute('aria-expanded', 'false')
-            emailEl.classList.remove('in')
-            emailEl.classList.add('out', 'animating')
-        } else {
-            mailButtonEl.setAttribute('aria-expanded', 'true')
-            emailEl.classList.remove('out')
-            emailEl.classList.add('in', 'animating')
+    for (const controller of document.querySelectorAll('[aria-controls][aria-expanded]')) {
+        const controlled = document.getElementById(controller.getAttribute('aria-controls'))
+        if (!controlled || !controlled.classList.contains('transition')) {
+            continue
         }
-    })
-
-    emailEl.addEventListener('animationend', () => {
-        emailEl.classList.remove('animating')
-    })
+        controller.addEventListener('click', () => {
+            const isCurrentlyActive = controller.getAttribute('aria-expanded') == 'true'
+            if (isCurrentlyActive) {
+                controller.setAttribute('aria-expanded', 'false')
+                controlled.classList.remove('in')
+                controlled.classList.add('out', 'animating')
+            } else {
+                controller.setAttribute('aria-expanded', 'true')
+                controlled.classList.remove('out')
+                controlled.classList.add('in', 'animating')
+            }
+        })
+        controlled.addEventListener('animationend', () => {
+            controlled.classList.remove('animating')
+        })
+    }
 
     /* Pub image collapse on mobile */
     const pubImgList = Array.from(document.getElementsByClassName('pub-img-wrapper'))
@@ -57,5 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     pubImgBtnList.forEach((btn, index) => {
         btn.addEventListener('click', () => togglePubImgCollapseOther(index))
+    })
+
+    const languageSwitchButton = document.getElementById('language-switch-button')
+    document.addEventListener('click', e => {
+        if (!e.target.closest('#language-switch') && languageSwitchButton.getAttribute('aria-expanded') == 'true') {
+            languageSwitchButton.click()
+        }
     })
 })

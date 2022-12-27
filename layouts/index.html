@@ -6,178 +6,252 @@
 <script src="{{ $homeScript.RelPermalink }}"></script>
 {{ end }}
 
-{{ define "main" }}
-<h1 class="sr-only">{{ .Site.Title }}</h1>
-<section id="intro">
-    <div class="intro-main">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Content }}</p>
-        {{- with .Site.Menus.social -}}
-        <address>
-            <ul class="social-menu">
-                <li>
-                    <button class="icon-button" id="email-button" title="Email" aria-controls="email" aria-expanded="false">
-                        {{ partial "helper/icon" "mail-closed" }}{{ partial "helper/icon" "mail-opened" }}
-                    </button>
-                </li>
-                {{ range . }}
-                <li>
-                    <a
-                        href='{{ .URL }}'
-                        {{ if eq (default true .Params.newTab) true }}target="_blank" rel="noreferrer noopener"{{ end }}
-                        {{ with .Name }}title="{{ . }}"{{ end }}
-                    >
-                        {{ $icon := default "link" .Params.Icon }}
-                        {{ with $icon }}
-                            {{ partial "helper/icon" . }}
-                        {{ end }}
-                    </a>
-                </li>
-                {{ end }}
-            </ul>
-            <div id="email" class="transition fade-down out">
-                zhuangbi 𝖆𝖙 connect 𝕕𝕠𝕥 ust 𝕕𝕠𝕥 hk
-            </div>
-        </address>
-        {{- end -}}
-    </div>
-    <div class="intro-right">
-        {{ $avatar := resources.Get "avatar.jpg" }}
-        {{ if $avatar }}
-            <img src="{{ $avatar.RelPermalink }}" class="avatar"
-                loading="lazy" alt="A very handsome face">
-        {{ else }}
-            {{ errorf "Failed loading avatar from %q" . }}
-        {{ end }}
-    </div>
-</section>
 
-{{/*  <img src="/avatar.jpg" width="300" height="300" class="avatar" loading="lazy" alt="Avatar">  */}}
-{{ with $.Site.Data.personal.publications }}
-<section id="publications">
-    <h2>{{ T "publications" }}</h2>
-    {{ range . }}
-    <article class="pub-container">
-        <div class="pub-img-wrapper">
-            {{ $img := resources.Get .img }}
-            {{ $imgID := anchorize .short }}
-            <img src="{{ $img.RelPermalink }}" class="pub-img" alt="Showcase image" id="{{ $imgID }}-img">
-            <button class="pub-img-collapser" aria-controls="{{$imgID}}" aria-expanded="false">
-                <span class="collapse-label left">⬆️</span>
-                <span class="expand-label">Tap on the image to expand</span>
-                <span class="collapse-label right">⬆️</span>
-            </button>
-        </div>
-        <div class="pub-main">
-            <h3>{{ .title }}</h3>
-            <p class="author-line">
-            {{ range $key, $value := .authors }}
-                {{- if ne $key 0 -}}, {{ end -}}
-                {{- partial "name-link" $value -}}
-            {{ end }}
-            </p>
-            <p class="links">
-            {{ with .links }}
-                {{ with .doi }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "doi" }}DOI</a>{{ end }}
-                {{ with .pdf }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "file-text" }}PDF</a>{{ end }}
-                {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
-                {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "code" }}Source Code</a>{{ end }}
-                {{ with .presentation }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "presentation" }}Presentation</a>{{ end }}
-            {{ end }}
-            </p>
-        </div>
-    </article>
-    {{ end }}
-</section>
-{{ end }}
-{{ with $.Site.Data.personal.projects }}
-<section id="projects">
-    <h2>{{T "projects"}}</h2>
-    <div class="projects-gallery gallery">
-    {{ range . }}
-    <article class="project-card card">
-        {{ $img := resources.Get .img }}
-        <img src="{{ $img.RelPermalink }}" class="card-header-img" alt="Showcase image">
-        <div>
-            <h3>{{ .title }}</h3>
-            <p>{{ .description }}</p>
-            <p class="links">
-            {{ with .links }}
-                {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
-                {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "code" }}Source Code</a>{{ end }}
-            {{ end }}
-            </p>
-        </div>
-    </article>
-    {{ end }}
-    </div>
-</section>
-{{ end }}
-{{ with $.Site.Data.personal.experiences }}
-<section id="experiences">
-    <h2>{{T "experiences"}}</h2>
-</section>
-{{ end }}
-{{ with $.Site.Data.personal.skills }}
-<section id="skills">
-    <h2>{{T "skills"}}</h2>
-</section>
-{{ end }}
-{{ with $.Site.Data.personal.facts }}
-<section id="fun-facts">
-    <h2>{{T "funFacts"}}</h2>
-</section>
-{{ end }}
+{{ define "header" }}
+{{ $hasPublications := isset $.Site.Data.personal "publications" }}
+{{ $hasProjects := isset $.Site.Data.personal "projects" }}
+{{ $hasExperiences := isset $.Site.Data.personal "experiences" }}
+{{ $hasSkills := isset $.Site.Data.personal "skills" }}
+{{ $hasFacts := isset $.Site.Data.personal "facts" }}
+{{ $hasFriends := isset $.Site.Data.personal "friends" }}
 {{ $pages := .Site.RegularPages }}
 {{ range .Site.Home.Translations }}
-{{ $pages = $pages | lang.Merge .Site.RegularPages }}
+    {{ $pages = $pages | lang.Merge .Site.RegularPages }}
 {{ end }}
-{{ if gt (len $pages) 0 }}
-<section id="recent-posts">
-    <h2>{{T "recentPosts"}}</h2>
-    <ul class="recent-posts-gallery gallery">
-        {{ range (first 6 $pages) }}
-        <li class="gallery-card card">
-            <a href="{{ .Permalink }}">
-                <h3 class="card-title">{{ .Title }}</h3>
-                <time class="card-footer">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
-                <p class="card-body">{{ .Summary }}</p>
-            </a>
+{{ $hasRecentPosts := gt (len $pages) 0 }}
+<div class="header">
+    <h1 class="header-title">{{ .Site.Title }}</h1>
+    <div style="flex: 1"></div>
+    <nav class="header-nav">
+        <ul class="header-menu" id="header-linkbar">
+            <li><a href="#intro" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "about" }}</a></li>
+            {{ if $hasPublications }}
+            <li><a href="#publications" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "publications" }}</a></li>
+            {{ end }}
+            {{ if $hasProjects }}
+            <li><a href="#projects" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "projects" }}</a></li>
+            {{ end }}
+            {{ if $hasExperiences }}
+            <li><a href="#experiences" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "experiences" }}</a></li>
+            {{ end }}
+            {{ if $hasSkills }}
+            <li><a href="#skills" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "skills" }}</a></li>
+            {{ end }}
+            {{ if $hasFacts }}
+            <li><a href="#fun-facts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "funFacts" }}</a></li>
+            {{ end }}
+            {{ if $hasRecentPosts }}
+            <li><a href="#recent-posts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "recentPosts" }}</a></li>
+            {{ end }}
+            {{ if $hasFriends }}
+            <li><a href="#friend-links" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "friendLinks" }}</a></li>
+            {{ end }}
+            <li><a href="blog" class="with-icon">{{ partial "helper/icon" "notebook" }}{{ T "blog" }}</a></li>
+        </ul>
+    </nav>
+    <div class="divider"> </div>
+    <menu class="header-menu" id="header-toolbar">
+        <li id="language-switch" class="dropdown-menu">
+            <button id="language-switch-button" aria-controls="language-menu" aria-expanded="false">
+                {{ partial "helper/icon" "language" }}
+            </button>
+            <ul id="language-menu" class="dropdown-list transition fade-down">
+                {{- $currentLanguageCode := .Language.Lang -}}
+                {{ with .Site.Home.AllTranslations }}
+                    {{ range . }}
+                        <li class="dropdown-item {{ if eq .Language.Lang $currentLanguageCode }}selected{{ end }}">
+                            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
         </li>
-        {{ end }}
-    </ul>
-</section>
+        <li id="dark-mode-switch">
+            <button id="dark-mode-toggle" title="Toggle Dark Mode" aria-label="Dark Mode">
+                {{ partial "helper/icon" "toggle-left" }}
+                {{ partial "helper/icon" "toggle-right" }}
+            </button>
+        </li>
+    </menu>
+</div>
 {{ end }}
-{{ with $.Site.Data.personal.friends }}
-<section id="friend-links">
-    <h2>{{T "friendLinks"}}</h2>
-    <ul class="people-list">
+
+{{ define "main" }}
+    <section id="intro">
+        <div class="intro-main">
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Content }}</p>
+            {{- with .Site.Menus.social -}}
+            <address>
+                <ul class="social-menu">
+                    <li>
+                        <button id="email-button" title="Email" aria-controls="email" aria-expanded="false">
+                            {{ partial "helper/icon" "mail-closed" }}{{ partial "helper/icon" "mail-opened" }}
+                        </button>
+                    </li>
+                    {{ range . }}
+                    <li>
+                        <a
+                            href='{{ .URL }}'
+                            {{ if eq (default true .Params.newTab) true }}target="_blank" rel="noreferrer noopener"{{ end }}
+                            {{ with .Name }}title="{{ . }}"{{ end }}
+                        >
+                            {{ $icon := default "link" .Params.Icon }}
+                            {{ with $icon }}
+                                {{ partial "helper/icon" . }}
+                            {{ end }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+                <div id="email" class="transition fade-down">
+                    zhuangbi 𝖆𝖙 connect 𝕕𝕠𝕥 ust 𝕕𝕠𝕥 hk
+                </div>
+            </address>
+            {{- end -}}
+        </div>
+        <div class="intro-right">
+            {{ $avatar := resources.Get "avatar.jpg" }}
+            {{ if $avatar }}
+                <img src="{{ $avatar.RelPermalink }}" class="avatar"
+                    loading="lazy" alt="A very handsome face">
+            {{ else }}
+                {{ errorf "Failed loading avatar from %q" . }}
+            {{ end }}
+        </div>
+    </section>
+
+    {{ with $.Site.Data.personal.publications }}
+    <section id="publications">
+        <h2>{{ T "publications" }}</h2>
         {{ range . }}
-        {{- $p := index site.Data.network.people . -}}
-        {{- $fullname := (printf "%s %s" $p.given $p.family) -}}
-        {{ if not (isset $p "url") }}
-        {{ break }}
+        <article class="pub-container">
+            <div class="pub-img-wrapper">
+                {{ $img := resources.Get .img }}
+                {{ $imgID := anchorize .short }}
+                <img src="{{ $img.RelPermalink }}" class="pub-img" alt="Showcase image" id="{{ $imgID }}-img">
+                <button class="pub-img-collapser" aria-controls="{{$imgID}}" aria-expanded="false">
+                    <span class="collapse-label left">⬆️</span>
+                    <span class="expand-label">Tap on the image to expand</span>
+                    <span class="collapse-label right">⬆️</span>
+                </button>
+            </div>
+            <div class="pub-main">
+                <h3>{{ .title }}</h3>
+                <p class="author-line">
+                {{ range $key, $value := .authors }}
+                    {{- if ne $key 0 -}}, {{ end -}}
+                    {{- partial "name-link" $value -}}
+                {{ end }}
+                </p>
+                <p class="links">
+                {{ with .links }}
+                    {{ with .doi }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "doi" }}DOI</a>{{ end }}
+                    {{ with .pdf }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "file-text" }}PDF</a>{{ end }}
+                    {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
+                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "code" }}Source Code</a>{{ end }}
+                    {{ with .presentation }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "presentation" }}Presentation</a>{{ end }}
+                {{ end }}
+                </p>
+            </div>
+        </article>
         {{ end }}
-        <li>
-            <a href="{{ $p.url }}" class="person-link">
-                {{- with $p -}}
-                {{- if isset . "avatar" -}}
-                <img src="{{ (resources.Get .avatar).RelPermalink }}" alt="{{.given}}'s avatar" class="person-avatar">
-                {{/*
-                {{- else -}}
-                <svg class="person-avatar" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle">{{ substr .family 0 1 | upper }}{{ substr .given 0 1 | upper }}</text>
-                </svg>
-                */}}
-                {{- end -}}
-                {{- end -}}
-                <span class="person-name">{{- $fullname -}}</span>
-            </a>
-        </li>
+    </section>
+    {{ end }}
+
+    {{ with $.Site.Data.personal.projects }}
+    <section id="projects">
+        <h2>{{T "projects"}}</h2>
+        <div class="projects-gallery gallery">
+        {{ range . }}
+        <article class="project-card card">
+            {{ $img := resources.Get .img }}
+            <img src="{{ $img.RelPermalink }}" class="card-header-img" alt="Showcase image">
+            <div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+                <p class="links">
+                {{ with .links }}
+                    {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
+                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "code" }}Source Code</a>{{ end }}
+                {{ end }}
+                </p>
+            </div>
+        </article>
         {{ end }}
-    </ul>
-</section>
-{{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with $.Site.Data.personal.experiences }}
+    <section id="experiences">
+        <h2>{{T "experiences"}}</h2>
+    </section>
+    {{ end }}
+
+    {{ with $.Site.Data.personal.skills }}
+    <section id="skills">
+        <h2>{{T "skills"}}</h2>
+    </section>
+    {{ end }}
+
+    {{ with $.Site.Data.personal.facts }}
+    <section id="fun-facts">
+        <h2>{{T "funFacts"}}</h2>
+    </section>
+    {{ end }}
+
+    {{ $pages := .Site.RegularPages }}
+    {{ range .Site.Home.Translations }}
+        {{ $pages = $pages | lang.Merge .Site.RegularPages }}
+    {{ end }}
+    {{ if gt (len $pages) 0 }}
+    <section id="recent-posts">
+        <h2>{{T "recentPosts"}}</h2>
+        <ul class="recent-posts-gallery gallery">
+            {{ range (first 6 $pages) }}
+            <li class="gallery-card card">
+                <a href="{{ .Permalink }}">
+                    <h3 class="card-title">{{ .Title }}</h3>
+                    <time class="card-footer">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+                    <p class="card-body">{{ .Summary }}</p>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+
+    {{ with $.Site.Data.personal.friends }}
+    <section id="friend-links">
+        <h2>{{T "friendLinks"}}</h2>
+        <ul class="people-list">
+            {{ range . }}
+            {{- $p := index site.Data.network.people . -}}
+            {{- $fullname := (printf "%s %s" $p.given $p.family) -}}
+            {{ if not (isset $p "url") }}
+            {{ break }}
+            {{ end }}
+            <li>
+                <a href="{{ $p.url }}" class="person-link">
+                    {{- with $p -}}
+                    {{- if isset . "avatar" -}}
+                    <img src="{{ (resources.Get .avatar).RelPermalink }}" alt="{{.given}}'s avatar" class="person-avatar">
+                    {{/*
+                    {{- else -}}
+                    <svg class="person-avatar" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle">{{ substr .family 0 1 | upper }}{{ substr .given 0 1 | upper }}</text>
+                    </svg>
+                    */}}
+                    {{- end -}}
+                    {{- end -}}
+                    <span class="person-name">{{- $fullname -}}</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
 {{ end }}
 
 {{ define "footer" }}
