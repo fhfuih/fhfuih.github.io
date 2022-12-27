@@ -202,9 +202,9 @@
     {{ end }}
 
     {{ $pages := .Site.RegularPages }}
-    {{ range .Site.Home.Translations }}
+    {{/*  {{ range .Site.Home.Translations }}
         {{ $pages = $pages | lang.Merge .Site.RegularPages }}
-    {{ end }}
+    {{ end }}  */}}
     {{ if gt (len $pages) 0 }}
     <section id="recent-posts">
         <h2>{{T "recentPosts"}}</h2>
