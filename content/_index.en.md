@@ -4,7 +4,7 @@ date: 2022-12-12T22:17:19+08:00
 lang: en
 ---
 
-My name is Huang Zeyu (<ruby>黄<rp>(</rp><rt>huāng</rt><rp>)</rp>
+My name is Huang Zeyu (<ruby>黄<rp>(</rp><rt>huáng</rt><rp>)</rp>
 泽<rp>(</rp><rt>zé</rt><rp>)</rp>宇<rp>(</rp><rt>yǔ</rt><rp>)</rp></ruby>).
 In Chinese, surname comes first.
 So you can call me Zeyu.
