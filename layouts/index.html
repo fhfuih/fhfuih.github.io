@@ -8,54 +8,16 @@
 
 
 {{ define "header" }}
-{{ $hasPublications := isset $.Site.Data.personal "publications" }}
-{{ $hasProjects := isset $.Site.Data.personal "projects" }}
-{{ $hasExperiences := isset $.Site.Data.personal "experiences" }}
-{{ $hasSkills := isset $.Site.Data.personal "skills" }}
-{{ $hasFacts := isset $.Site.Data.personal "facts" }}
-{{ $hasFriends := isset $.Site.Data.personal "friends" }}
-{{ $pages := .Site.RegularPages }}
-{{ range .Site.Home.Translations }}
-    {{ $pages = $pages | lang.Merge .Site.RegularPages }}
-{{ end }}
-{{ $hasRecentPosts := gt (len $pages) 0 }}
 <div class="header">
     <h1 class="header-title">{{ .Site.Title }}</h1>
-    <div style="flex: 1"></div>
-    <nav class="header-nav">
-        <ul class="header-menu" id="header-linkbar">
-            <li><a href="#intro" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "about" }}</a></li>
-            {{ if $hasPublications }}
-            <li><a href="#publications" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "publications" }}</a></li>
-            {{ end }}
-            {{ if $hasProjects }}
-            <li><a href="#projects" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "projects" }}</a></li>
-            {{ end }}
-            {{ if $hasExperiences }}
-            <li><a href="#experiences" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "experiences" }}</a></li>
-            {{ end }}
-            {{ if $hasSkills }}
-            <li><a href="#skills" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "skills" }}</a></li>
-            {{ end }}
-            {{ if $hasFacts }}
-            <li><a href="#fun-facts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "funFacts" }}</a></li>
-            {{ end }}
-            {{ if $hasRecentPosts }}
-            <li><a href="#recent-posts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "recentPosts" }}</a></li>
-            {{ end }}
-            {{ if $hasFriends }}
-            <li><a href="#friend-links" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "friendLinks" }}</a></li>
-            {{ end }}
-            <li><a href="blog" class="with-icon">{{ partial "helper/icon" "notebook" }}{{ T "blog" }}</a></li>
-        </ul>
-    </nav>
-    <div class="divider"> </div>
-    <menu class="header-menu" id="header-toolbar">
+    <div class="spacer"></div>
+    {{/*  <div class="divider"> </div>  */}}
+    <menu class="horizontal-menu" id="header-toolbar">
         <li id="language-switch" class="dropdown-menu">
-            <button id="language-switch-button" aria-controls="language-menu" aria-expanded="false">
+            <button id="language-switch-button" aria-controls="language-menu" aria-expanded="false" data-auto-associate>
                 {{ partial "helper/icon" "language" }}
             </button>
-            <ul id="language-menu" class="dropdown-list transition fade-down">
+            <ul id="language-menu" class="dropdown-list no-wrap transition fade-down">
                 {{- $currentLanguageCode := .Language.Lang -}}
                 {{ with .Site.Home.AllTranslations }}
                     {{ range . }}
@@ -77,6 +39,17 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $hasPublications := isset $.Site.Data.personal "publications" }}
+{{ $hasProjects := isset $.Site.Data.personal "projects" }}
+{{ $hasExperiences := isset $.Site.Data.personal "experiences" }}
+{{ $hasSkills := isset $.Site.Data.personal "skills" }}
+{{ $hasFacts := isset $.Site.Data.personal "facts" }}
+{{ $hasFriends := isset $.Site.Data.personal "friends" }}
+{{ $pages := .Site.RegularPages }}
+{{ range .Site.Home.Translations }}
+    {{ $pages = $pages | lang.Merge .Site.RegularPages }}
+{{ end }}
+{{ $hasRecentPosts := gt (len $pages) 0 }}
     <section id="intro">
         <div class="intro-main">
             <h2>{{ .Title }}</h2>
@@ -85,7 +58,7 @@
             <address>
                 <ul class="social-menu">
                     <li>
-                        <button id="email-button" title="Email" aria-controls="email" aria-expanded="false">
+                        <button id="email-button" title="Email" aria-controls="email" aria-expanded="false" data-auto-associate>
                             {{ partial "helper/icon" "mail-closed" }}{{ partial "helper/icon" "mail-opened" }}
                         </button>
                     </li>
@@ -120,6 +93,35 @@
             {{ end }}
         </div>
     </section>
+
+    <div class="container-bleed sticky-top" id="site-nav-wrapper">
+        <nav class="no-wrap" id="site-nav">
+            <ul class="horizontal-menu" id="site-nav-list">
+                {{ if $hasPublications }}
+                <li><a href="#publications" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "publications" }}</a></li>
+                {{ end }}
+                {{ if $hasProjects }}
+                <li><a href="#projects" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "projects" }}</a></li>
+                {{ end }}
+                {{ if $hasExperiences }}
+                <li><a href="#experiences" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "experiences" }}</a></li>
+                {{ end }}
+                {{ if $hasSkills }}
+                <li><a href="#skills" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "skills" }}</a></li>
+                {{ end }}
+                {{ if $hasFacts }}
+                <li><a href="#fun-facts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "funFacts" }}</a></li>
+                {{ end }}
+                {{ if $hasRecentPosts }}
+                <li><a href="#recent-posts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "recentPosts" }}</a></li>
+                {{ end }}
+                {{ if $hasFriends }}
+                <li><a href="#friend-links" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "friendLinks" }}</a></li>
+                {{ end }}
+                <li><a href="blog" class="with-icon">{{ partial "helper/icon" "notebook" }}{{ T "blog" }}</a></li>
+            </ul>
+        </nav>
+    </div>
 
     {{ with $.Site.Data.personal.publications }}
     <section id="publications">

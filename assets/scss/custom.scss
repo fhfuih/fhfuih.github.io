@@ -1,0 +1,22 @@
+$scrollbar-size: 3px;
+/* scrollbar styles for Firefox */
+* {
+    scrollbar-width: $scrollbar-size;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+/**/
+
+/* scrollbar styles for Chromium */
+::-webkit-scrollbar {
+    height: $scrollbar-size;
+    width: $scrollbar-size;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/**/

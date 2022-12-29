@@ -1,5 +1,27 @@
 @import '../themes/stack/assets/scss/breakpoints.scss';
 
+@mixin respond-below($breakpoint) {
+    @if not map-has-key($breakpoints, $breakpoint) {
+        @warn "'#{$breakpoint}' is not a valid breakpoint";
+    } @else {
+        @media (max-width: (map-get($breakpoints, $breakpoint) - 1px)) {
+            @content;
+        }
+    }
+}
+
+@mixin respond-between($from, $to) {
+    @if not map-has-key($breakpoints, $from) {
+        @warn "'#{$from}' is not a valid breakpoint";
+    } @else if not map-has-key($breakpoints, $to) {
+        @warn "'#{$to}' is not a valid breakpoint";
+    } @else {
+        @media (min-width: map-get($breakpoints, $from)) and (max-width: (map-get($breakpoints, $to) - 1)) {
+            @content;
+        }
+    }
+}
+
 :root {
     --link-shadow: 0px -0.3em 0px rgba(var(--link-background-color), var(--link-background-opacity-hover)) inset;
     --nav-hover-background-color: rgba(var(--link-background-color), var(--link-background-opacity-hover));
@@ -46,6 +68,10 @@ body.home {
             max-width: 1280px;
         }
     }
+    .container-bleed {
+        margin: 0 -3rem;
+        width: calc(100% + 6rem);
+    }
     .with-icon {
         display: inline-flex;
         align-items: center;
@@ -57,34 +83,44 @@ body.home {
 
     // Header
     .header {
-        margin: 0 6rem;
+        margin: 0 3rem;
         display: flex;
         align-items: center;
     }
     .header-title {
-        font-size: 1.5em;
-        font-weight: normal;
+        font-size: 1.2em;
+        @include respond(lg) {
+            font-size: 1.5em;
+        }
     }
-    nav.header-nav {
-        display: inline-block;
-
-    }
-    .header-menu {
-        display: inline-flex;
+    .horizontal-menu {
+        display: flex;
         align-items: center;
         color: var(--accent-color);
         & a, & button {
-            padding: 0.8rem 1.2rem;
+            padding: 0.5rem 0.8rem;
+            @include respond(lg) {
+                padding: 0.8rem 1.2rem;
+            }
             &:hover {
                 color: var(--accent-color-darker);
-                // background-color: var(--nav-hover-background-color);
                 text-decoration: underline;
             }
         }
     }
-    #header-linkbar svg {
-        height: 1em;
-        width: 1em;
+    #header-toolbar {
+        margin-right: -0.8rem;
+        @include respond(lg) {
+            margin-right: -1.2rem;
+        }
+        svg {
+            height: 1.2em;
+            width: 1.2em;
+            @include respond(lg) {
+                height: 1.5em;
+                width: 1.5em;
+            }
+        }
     }
     .dropdown-menu {
         position: relative;
@@ -103,30 +139,53 @@ body.home {
     }
     .dropdown-item > a {
         display: block;
-        white-space: nowrap;
-        word-break: keep-all;
+        // white-space: nowrap;
+        // word-break: keep-all;
     }
     .divider {
         margin: 0 0.5rem;
         height: 1.2em;
         border: 1px solid var(--accent-color);
+        display: none;
+        @include respond(md) {
+            display: block;
+        }
+    }
+    .spacer {
+        flex: 1;
     }
 
     // Intro section
     #intro {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        gap: var(--section-separation);
         h2 {
             font-size: 3em;
         }
-        .intro-right {
-            flex: 0 0 200px;
+    }
+    .intro-main {
+        flex: 1;
+    }
+    .intro-right {
+        flex: 0 0 100%;
+        padding: 0 30% 0 30%;
+        order: -1;
+        @include respond(sm) {
+            order: unset;
+            padding: 0;
+            flex-basis: 150px;
+            margin-left: 40px;
+        }
+        @include respond(md) {
+            flex-basis: 200px;
         }
     }
     .avatar {
         border-radius: 50%;
         width: 100%;
+        min-width: 150px;
         height: auto;
     }
     .social-menu {
@@ -144,6 +203,30 @@ body.home {
     }
     #email {
         display: inline-block;
+    }
+
+    // nav
+    #site-nav-wrapper {
+        padding: 0 2rem;
+    }
+    #site-nav {
+        margin: -3rem 0 -4rem;
+        padding: 1rem 0;
+        background-color: var(--body-background);
+        overflow-x: auto;
+        svg {
+            height: 1em;
+            width: 1em;
+            stroke-width: 2.5;
+        }
+    }
+    #site-nav-list {
+        >*:first-child {
+            margin-left: auto;
+        }
+        >*:last-child {
+            margin-right: auto;
+        }
     }
 
     // Publications section
@@ -235,7 +318,7 @@ body.home {
             }
         }
     }
-    @media (max-width: (map-get($breakpoints, md) - 1)) {
+    @include respond-below(md) {
         .pub-img-wrapper {
             height: 180px;
             &.expanded {
@@ -269,8 +352,8 @@ body.home {
         gap: 10px;
     }
     .projects-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        @include respond(md) {
+        grid-template-columns: repeat(1, 1fr);
+        @include respond(sm) {
             grid-template-columns: repeat(2, 1fr);
         }
         @include respond(lg) {
@@ -319,7 +402,7 @@ body.home {
             grid-template-columns: repeat(4, 1fr);
             
         }
-        @media (min-width: map-get($breakpoints, lg)) and (max-width: (map-get($breakpoints, xl) - 1)) {
+        @include respond-between(lg, xl) {
             &>*:nth-child(n+5) {
                 display: none;
             }
@@ -421,6 +504,15 @@ body.home {
         list-style: none;
     }
 }
+.no-wrap {
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
 .sr-only {
     position: absolute !important;
     width: 1px !important;
@@ -464,7 +556,6 @@ body.home {
 
 .transition.fade-down.out {
     animation-name: fadeOutDown;
-    pointer-events: none;
 }
 
 @keyframes slideIn {

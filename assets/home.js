@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.classList.add('out')
     }
 
-    for (const controller of document.querySelectorAll('[aria-controls][aria-expanded]')) {
+    for (const controller of document.querySelectorAll('[aria-controls][aria-expanded][data-auto-associate]')) {
         const controlled = document.getElementById(controller.getAttribute('aria-controls'))
         if (!controlled || !controlled.classList.contains('transition')) {
             continue
@@ -13,10 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const isCurrentlyActive = controller.getAttribute('aria-expanded') == 'true'
             if (isCurrentlyActive) {
                 controller.setAttribute('aria-expanded', 'false')
+                controlled.dataset.expanded = false
                 controlled.classList.remove('in')
                 controlled.classList.add('out', 'animating')
             } else {
                 controller.setAttribute('aria-expanded', 'true')
+                controlled.dataset.expanded = true
                 controlled.classList.remove('out')
                 controlled.classList.add('in', 'animating')
             }
@@ -24,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
         controlled.addEventListener('animationend', () => {
             controlled.classList.remove('animating')
         })
+
+        // init
+        if (controller.getAttribute('aria-expanded') != 'true') {
+            controller.setAttribute('aria-expand', 'false')
+            controlled.classList.add('out')
+            controlled.classList.remove('animating', 'in')
+            controlled.dataset.expanded = false
+        }
     }
 
     /* Pub image collapse on mobile */
