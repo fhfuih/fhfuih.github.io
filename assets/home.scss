@@ -207,12 +207,10 @@ body.home {
 
     // nav
     #site-nav-wrapper {
-        padding: 0 2rem;
+        padding: 1rem 2rem;
+        background-color: var(--body-background);
     }
     #site-nav {
-        margin: -3rem 0 -4rem;
-        padding: 1rem 0;
-        background-color: var(--body-background);
         overflow-x: auto;
         svg {
             height: 1em;
