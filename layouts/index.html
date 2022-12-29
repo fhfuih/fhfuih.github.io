@@ -15,7 +15,7 @@
     <menu class="horizontal-menu" id="header-toolbar">
         <li id="language-switch" class="dropdown-menu">
             <button id="language-switch-button" aria-controls="language-menu" aria-expanded="false" data-auto-associate>
-                {{ partial "helper/icon" "language" }}
+                {{ partial "helper/icon-sprite" "language" }}
             </button>
             <ul id="language-menu" class="dropdown-list no-wrap transition fade-down">
                 {{- $currentLanguageCode := .Language.Lang -}}
@@ -30,8 +30,8 @@
         </li>
         <li id="dark-mode-switch">
             <button id="dark-mode-toggle" title="Toggle Dark Mode" aria-label="Dark Mode">
-                {{ partial "helper/icon" "toggle-left" }}
-                {{ partial "helper/icon" "toggle-right" }}
+                {{ partial "helper/icon-sprite" "toggle-left" }}
+                {{ partial "helper/icon-sprite" "toggle-right" }}
             </button>
         </li>
     </menu>
@@ -59,7 +59,7 @@
                 <ul class="social-menu">
                     <li>
                         <button id="email-button" title="Email" aria-controls="email" aria-expanded="false" data-auto-associate>
-                            {{ partial "helper/icon" "mail-closed" }}{{ partial "helper/icon" "mail-opened" }}
+                            {{ partial "helper/icon-sprite" "mail" }}{{ partial "helper/icon-sprite" "mail-opened" }}
                         </button>
                     </li>
                     {{ range . }}
@@ -71,7 +71,7 @@
                         >
                             {{ $icon := default "link" .Params.Icon }}
                             {{ with $icon }}
-                                {{ partial "helper/icon" . }}
+                                {{ partial "helper/icon-sprite" . }}
                             {{ end }}
                         </a>
                     </li>
@@ -98,27 +98,27 @@
         <nav class="no-wrap" id="site-nav">
             <ul class="horizontal-menu" id="site-nav-list">
                 {{ if $hasPublications }}
-                <li><a href="#publications" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "publications" }}</a></li>
+                <li><a href="#publications" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "publications" }}</a></li>
                 {{ end }}
                 {{ if $hasProjects }}
-                <li><a href="#projects" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "projects" }}</a></li>
+                <li><a href="#projects" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "projects" }}</a></li>
                 {{ end }}
                 {{ if $hasExperiences }}
-                <li><a href="#experiences" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "experiences" }}</a></li>
+                <li><a href="#experiences" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "experiences" }}</a></li>
                 {{ end }}
                 {{ if $hasSkills }}
-                <li><a href="#skills" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "skills" }}</a></li>
+                <li><a href="#skills" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "skills" }}</a></li>
                 {{ end }}
                 {{ if $hasFacts }}
-                <li><a href="#fun-facts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "funFacts" }}</a></li>
+                <li><a href="#fun-facts" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "funFacts" }}</a></li>
                 {{ end }}
                 {{ if $hasRecentPosts }}
-                <li><a href="#recent-posts" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "recentPosts" }}</a></li>
+                <li><a href="#recent-posts" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "recentPosts" }}</a></li>
                 {{ end }}
                 {{ if $hasFriends }}
-                <li><a href="#friend-links" class="with-icon">{{ partial "helper/icon" "hash" }}{{ T "friendLinks" }}</a></li>
+                <li><a href="#friend-links" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "friendLinks" }}</a></li>
                 {{ end }}
-                <li><a href="blog" class="with-icon">{{ partial "helper/icon" "notebook" }}{{ T "blog" }}</a></li>
+                <li><a href="blog" class="with-icon">{{ partial "helper/icon-sprite" "notebook" }}{{ T "blog" }}</a></li>
             </ul>
         </nav>
     </div>
@@ -148,11 +148,11 @@
                 </p>
                 <p class="links">
                 {{ with .links }}
-                    {{ with .doi }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "doi" }}DOI</a>{{ end }}
-                    {{ with .pdf }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "file-text" }}PDF</a>{{ end }}
+                    {{ with .doi }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "brand-safari" }}DOI</a>{{ end }}
+                    {{ with .pdf }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "file-text" }}PDF</a>{{ end }}
                     {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
-                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "code" }}Source Code</a>{{ end }}
-                    {{ with .presentation }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "presentation" }}Presentation</a>{{ end }}
+                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "code" }}Source Code</a>{{ end }}
+                    {{ with .presentation }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "presentation" }}Presentation</a>{{ end }}
                 {{ end }}
                 </p>
             </div>
@@ -175,7 +175,7 @@
                 <p class="links">
                 {{ with .links }}
                     {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
-                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "code" }}Source Code</a>{{ end }}
+                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "code" }}Source Code</a>{{ end }}
                 {{ end }}
                 </p>
             </div>
