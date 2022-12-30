@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .icon-tabler-sun-moon.sun .icon-moon {
+      stroke-width: 1.5;
+    }
+    .icon-tabler-sun-moon.sun .icon-mask path,
+    .icon-tabler-sun-moon.moon:hover .icon-mask path {
+      d: path('M7 21l14 -14');
+    }
+    .icon-tabler-sun-moon.sun #icon-clip-sun path,
+    .icon-tabler-sun-moon.moon:hover #icon-clip-sun path {
+      d: path('M0 28v-28h28Z');
+    }
+    .icon-tabler-sun-moon.sun #icon-clip-moon path,
+    .icon-tabler-sun-moon.moon:hover #icon-clip-moon path {
+      d: path('M28 0v28h-28Z');
+    }
+    .icon-tabler-sun-moon.moon .icon-sun {
+      stroke-width: 1.5;
+    }
+    .icon-tabler-sun-moon.moon .icon-mask path,
+    .icon-tabler-sun-moon.sun:hover .icon-mask path {
+      d: path('M3 17l14 -14');
+    }
+    .icon-tabler-sun-moon.moon #icon-clip-sun path,
+    .icon-tabler-sun-moon.sun:hover #icon-clip-sun path {
+      d: path('M-4 24v-28h28Z');
+    }
+    .icon-tabler-sun-moon.moon #icon-clip-moon path,
+    .icon-tabler-sun-moon.sun:hover #icon-clip-moon path {
+      d: path('M24 -4v28h-28Z');
+    }
+    .icon-tabler-sun-moon path {
+      transition: 0.2s ease;
+    }
+  </style>
+  <clipPath id="icon-clip-sun">
+    <path d="M0 24v-24h24Z"></path>
+  </clipPath>
+  <clipPath id="icon-clip-moon">
+    <path d="M24 0v24h-24Z"></path>
+  </clipPath>
+  <g class="icon-sun" clip-path="url(#icon-clip-sun)">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+  </g>
+  <g class="icon-moon" clip-path="url(#icon-clip-moon)">
+    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+  </g>
+  <g class="icon-mask">
+    <path d="M5 19l14 -14"></path>
+  </g>
+</svg>

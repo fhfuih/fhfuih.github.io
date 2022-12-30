@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    for (const e of document.getElementsByClassName('transition')) {
-        if (!e.classList.contains('in'))
-            e.classList.add('out')
-    }
-
+    // Auto-associate collapsible content and its controller
     for (const controller of document.querySelectorAll('[aria-controls][aria-expanded][data-auto-associate]')) {
         const controlled = document.getElementById(controller.getAttribute('aria-controls'))
         if (!controlled || !controlled.classList.contains('transition')) {
@@ -73,10 +69,28 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => togglePubImgCollapseOther(index))
     })
 
+    // language switch: clickaway
     const languageSwitchButton = document.getElementById('language-switch-button')
     document.addEventListener('click', e => {
         if (!e.target.closest('#language-switch') && languageSwitchButton.getAttribute('aria-expanded') == 'true') {
             languageSwitchButton.click()
         }
     })
+
+    // Dark mode switch: update icon
+    const darkModeIcon = document.querySelector('#dark-mode-toggle>svg')
+    window.addEventListener('onColorSchemeChange', e => {
+        console.log(e)
+        const colorScheme = e.detail;
+        if (colorScheme == 'dark') {
+            darkModeIcon.classList.replace('sun', 'moon')
+        } else {
+            darkModeIcon.classList.replace('moon', 'sun')
+        }
+    })
+    const currentScheme = document.documentElement.dataset.scheme
+    if (currentScheme == 'light')
+        darkModeIcon.classList.add('sun')
+    else if (currentScheme == 'dark')
+        darkModeIcon.classList.add('moon')
 })

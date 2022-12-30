@@ -14,8 +14,8 @@
     {{/*  <div class="divider"> </div>  */}}
     <menu class="horizontal-menu" id="header-toolbar">
         <li id="language-switch" class="dropdown-menu">
-            <button id="language-switch-button" aria-controls="language-menu" aria-expanded="false" data-auto-associate>
-                {{ partial "helper/icon-sprite" "language" }}
+            <button id="language-switch-button" class="icon-button {{ .Language }}" title="Change language" aria-controls="language-menu" aria-expanded="false" data-auto-associate>
+                {{ partial "helper/icon" "language" }}
             </button>
             <ul id="language-menu" class="dropdown-list no-wrap transition fade-down">
                 {{- $currentLanguageCode := .Language.Lang -}}
@@ -29,9 +29,8 @@
             </ul>
         </li>
         <li id="dark-mode-switch">
-            <button id="dark-mode-toggle" title="Toggle Dark Mode" aria-label="Dark Mode">
-                {{ partial "helper/icon-sprite" "toggle-left" }}
-                {{ partial "helper/icon-sprite" "toggle-right" }}
+            <button id="dark-mode-toggle" class="icon-button" title="Toggle Dark Mode" aria-label="Dark Mode">
+                {{ partial "helper/icon" "sun-moon" }}
             </button>
         </li>
     </menu>
@@ -54,18 +53,18 @@
         <div class="intro-main">
             <h2>{{ .Title }}</h2>
             <p>{{ .Content }}</p>
-            {{- with .Site.Menus.social -}}
             <address>
                 <ul class="social-menu">
                     <li>
-                        <button id="email-button" title="Email" aria-controls="email" aria-expanded="false" data-auto-associate>
+                        <button id="email-button" class="icon-button" title="Email" aria-controls="email" aria-expanded="false" data-auto-associate>
                             {{ partial "helper/icon-sprite" "mail" }}{{ partial "helper/icon-sprite" "mail-opened" }}
                         </button>
                     </li>
-                    {{ range . }}
+                    {{ range .Site.Menus.social }}
                     <li>
                         <a
                             href='{{ .URL }}'
+                            class="icon-button"
                             {{ if eq (default true .Params.newTab) true }}target="_blank" rel="noreferrer noopener"{{ end }}
                             {{ with .Name }}title="{{ . }}"{{ end }}
                         >
@@ -81,7 +80,6 @@
                     zhuangbi 𝖆𝖙 connect 𝕕𝕠𝕥 ust 𝕕𝕠𝕥 hk
                 </div>
             </address>
-            {{- end -}}
         </div>
         <div class="intro-right">
             {{ $avatar := resources.Get "avatar.jpg" }}

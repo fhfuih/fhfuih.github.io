@@ -10,6 +10,7 @@ In Chinese, surname comes first.
 So you can call me Zeyu.
 I am currently a PhD student in CSE at the [HCI Lab](http://hci.cse.ust.hk) of [HKUST](https://hkust.edu.hk),
 supervised by [Prof. MA, Xiaojuan](https://www.cse.ust.hk/~mxj/).
+Prior to that, I also earned my Bachelor's Degree in CS and MATH at HKUST.
 
 I am an [ENFJ](https://www.16personalities.com/enfj-personality) that never believes in [MBTI](https://www.16personalities.com) (which is probably why I'm [N](https://www.16personalities.com/articles/energy-intuitive-vs-observant)).
 I love music and playing drums.

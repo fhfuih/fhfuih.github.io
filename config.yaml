@@ -23,7 +23,7 @@ menu:
         # newTab: false
 
 params:
-  favicon: favicon.ico
+  favicon: /favicon.ico
   mainSections:
   - blog
   sidebar:

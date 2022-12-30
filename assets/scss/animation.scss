@@ -1,0 +1,90 @@
+.animating {
+    pointer-events: none;
+    animation-duration: 300ms;
+}
+
+.transition.fade-down {
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+.transition.fade-down.in {
+    animation-name: fadeInDown;
+}
+
+.transition.fade-down.out {
+    animation-name: fadeOutDown;
+}
+
+@keyframes slideIn {
+    0% {
+        max-width: 0;
+    }
+    100% {
+        max-width: 9999px;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        max-width: 9999px;
+    }
+    100% {
+        max-width: 0;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10%);
+                transform: translateY(-10%);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+                transform: translateY(0%);
+      }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+                transform: translateY(0%);
+      }
+      100% {
+        opacity: 0;
+        -webkit-transform: translateY(-5%);
+                transform: translateY(-5%);
+      }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(360deg);
+    }
+    40% {
+        transform: rotate(720deg);
+    }
+    50% {
+        transform: rotate(1080deg);
+    }
+    60% {
+        transform: rotate(1440deg);
+    }
+    75% {
+        transform: rotate(1800deg);
+    }
+    100% {
+        transform: rotate(2160deg);
+    }
+    // 100% {
+    //     transform: rotate(2520deg);
+    // }
+}

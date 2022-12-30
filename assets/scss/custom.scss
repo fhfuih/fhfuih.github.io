@@ -1,12 +1,15 @@
+/* This file will be imported in EVERY page */
+@import "./utilities.scss";
+
+/* scrollbar styles */
 $scrollbar-size: 3px;
-/* scrollbar styles for Firefox */
+// Firefox
 * {
     scrollbar-width: $scrollbar-size;
     scrollbar-color: var(--scrollbar-thumb) transparent;
 }
-/**/
 
-/* scrollbar styles for Chromium */
+// Chromium
 ::-webkit-scrollbar {
     height: $scrollbar-size;
     width: $scrollbar-size;
@@ -19,4 +22,48 @@ $scrollbar-size: 3px;
 ::-webkit-scrollbar-track {
     background-color: transparent;
 }
-/**/
+
+/* Scroll shadow */
+:root {
+    --scroll-shadow-width: 7px;
+    --scroll-shadow-color: rgba(0, 0, 0, 0.2);
+    [data-scheme="dark"] & {
+        --scroll-shadow-width: 10px;
+        --scroll-shadow-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* CSS utilities */
+.no-wrap {
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;  /* 2 */
+    white-space: nowrap !important;            /* 3 */
+    border: 0 !important;
+}
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+    clip: auto !important;
+    -webkit-clip-path: none !important;
+        clip-path: none !important;
+    height: auto !important;
+    margin: auto !important;
+    overflow: visible !important;
+    width: auto !important;
+    white-space: normal !important;
+}
