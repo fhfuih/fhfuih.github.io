@@ -214,7 +214,10 @@
                 <a href="{{ .Permalink }}">
                     <h3 class="card-title">{{ .Title }}</h3>
                     <time class="card-footer">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
-                    <p class="card-body">{{ .Summary }}</p>
+                    <p class="card-body">
+                        {{ .Summary }}
+                        {{- if .Truncated -}}&hellip;{{ end -}}
+                    </p>
                 </a>
             </li>
             {{ end }}

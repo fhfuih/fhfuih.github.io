@@ -31,6 +31,7 @@ params:
       local: true
       src: avatar.jpg
   featuredImageField: featured_image
+  citation_author: Huang, Zeyu
 
 markup:
   goldmark:
