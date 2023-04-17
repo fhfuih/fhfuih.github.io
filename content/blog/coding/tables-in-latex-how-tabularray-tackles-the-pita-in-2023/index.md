@@ -7,7 +7,6 @@ tags:
 summary: >
     在 LaTeX 里面写表格一直非常令人头大：基础的表格不够用，CTAN 里面增强表格功能的宏包五花八门，网上搜索到的教程也各显神通。
     最近我发现了一个叫 `tabularray` 的宏包，一站式地解决了我的常见需求，
-    所以尝试用本文总结一些心得。
 ---
 
 在 LaTeX 里面写表格一直非常令人头大：基础的表格不够用，CTAN 里面增强表格功能的宏包五花八门，网上搜索到的教程也各显神通。
@@ -67,14 +66,14 @@ summary: >
 2. 使用 `p{}` columntype 之后，可以用 `\newline` 在单元格内换行。
 3. 为了调右对齐，要引入 `array` 宏包。它提供了在 columntype 前后加入 `>{...}`、`<{...}` 的语法，大括号中的东西会应用在该列每个单元格的内容前后。
 同时它提供了 `\raggedleft` 命令实现右对齐。但是该宏包重新定义了 `\\` 换行符，并提供了一个 `\arraybackslash` 恢复。
-所以全部加起来，`>{\raggedleft\arraybackslash}p{宽度}` 即可实现换行。
+所以全部加起来，`>{\raggedleft\arraybackslash}p{宽度}` 即可实现右对齐。
     * `array` 宏包还新增了 `m{宽度}` 和 `b{宽度}` 的环境。
     * 嫌丑的话，亦可多引入一个 `ragged2e` 宏包，使用它的 `>{\RaggedLeft}p{宽度}` 右对齐。
 4. 自适应列宽则需要引入 `tabularx` 宏包，使用它的 `X` columntype 让列拉伸占满剩余长度。同时表格环境要改成 `\begin{tabularx}{表格总宽}`。
     * 此时还会遇到类似目的的 `tabulary` 宏包和 `tabu` 宏包（已停止维护）。它们区别在哪儿呢？我不知道。
 5. 给表格加上批注则需要 `threeparttable` 宏包，在 `table` 环境和 `tabular`（或其它等效环境）环境之见插入一个 `threeparttable` 环境。具体语法此处忽略。
     * 还有一个 `threeparttablex` 宏包。它有什么区别？我不知道。
-6. 单元格换行则需要 `multirow` 宏包，在需要合并的单元格处使用 `\multirow` 和/或 `\multicolumn` 命令。
+6. 单元格合并则需要 `multirow` 宏包，在需要合并的单元格处使用 `\multirow` 和/或 `\multicolumn` 命令。
 7. 表格换页则需要 `longtable` 宏包，用 `longtable` 环境替代 `tabluar`。（它是否涵盖 `tabularx` 等宏包的额外功能呢？我不知道）
 
 ## `tabularray` 实践
