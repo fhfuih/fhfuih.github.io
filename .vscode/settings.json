@@ -6,5 +6,11 @@
             "strings": "on",
             "other": "on"
         }
-    }
+    },
+    "[html]": {
+        "editor.formatOnSave": false
+    },
+    "[svg]": {
+        "editor.formatOnSave": false
+    },
 }

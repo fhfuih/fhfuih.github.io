@@ -21,11 +21,21 @@ menu:
       params:
         icon: brand-github
         # newTab: false
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/zeyu-huang-522a52178/
+      params:
+        icon: brand-linkedin
+    - name: ORCiD
+      url: https://orcid.org/0000-0001-8199-071X
+      params:
+        icon: orcid
+    # params:
+    #   icon: null
 
 params:
   favicon: /favicon.ico
   mainSections:
-  - blog
+    - blog
   sidebar:
     avatar:
       local: true

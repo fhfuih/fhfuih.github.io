@@ -1,0 +1,9 @@
+{{- $iconFile := resources.GetMatch (printf "icons/%s.svg" .) -}}
+{{- if $iconFile -}}
+    {{- $iconFile.Content | safeHTML -}}
+{{- else -}}
+    {{- $sprite := resources.Get "icons/tabler-sprite.svg" -}}
+    <svg width="24" height="24">
+        <use xlink:href="{{ $sprite.Permalink }}#tabler-{{ . }}" />
+    </svg>
+{{- end -}}

@@ -1,8 +1,14 @@
 /* This file will be imported in EVERY page */
 @import "./utilities.scss";
 
+.social-menu svg {
+    stroke: var(--accent-color) !important;
+    stroke-width: 2 !important;
+}
+
 /* scrollbar styles */
 $scrollbar-size: 3px;
+
 // Firefox
 * {
     scrollbar-width: $scrollbar-size;
@@ -27,6 +33,7 @@ $scrollbar-size: 3px;
 :root {
     --scroll-shadow-width: 7px;
     --scroll-shadow-color: rgba(0, 0, 0, 0.2);
+
     [data-scheme="dark"] & {
         --scroll-shadow-width: 10px;
         --scroll-shadow-color: rgba(255, 255, 255, 0.2);
@@ -38,11 +45,13 @@ $scrollbar-size: 3px;
     word-break: keep-all;
     white-space: nowrap;
 }
+
 .sticky-top {
     position: sticky;
     top: 0;
     z-index: 1020;
 }
+
 .sr-only {
     position: absolute !important;
     width: 1px !important;
@@ -50,17 +59,18 @@ $scrollbar-size: 3px;
     padding: 0 !important;
     margin: -1px !important;
     overflow: hidden !important;
-    clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+    clip: rect(1px, 1px, 1px, 1px) !important;
     -webkit-clip-path: inset(50%) !important;
-    clip-path: inset(50%) !important;  /* 2 */
-    white-space: nowrap !important;            /* 3 */
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
     border: 0 !important;
 }
+
 .sr-only-focusable:focus,
 .sr-only-focusable:active {
     clip: auto !important;
     -webkit-clip-path: none !important;
-        clip-path: none !important;
+    clip-path: none !important;
     height: auto !important;
     margin: auto !important;
     overflow: visible !important;
