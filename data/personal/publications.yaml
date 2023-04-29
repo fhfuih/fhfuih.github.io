@@ -1,14 +1,31 @@
 # yaml-language-server: $schema=../../schemas/personal/publications.json
-- title: 'PlanHelper: Supporting Activity Plan Construction with Answer Posts in Community-based
-    QA Platforms'
+- title: "CoArgue: Fostering Lurkers’ Contribution to Collective Arguments in Community-based QA Platforms"
+  short: CoArgue
+  authors:
+    - liu|chengzhong
+    - zhou|shixu
+    - liu|dingdong
+    - li|junzhe
+    - huang|zeyu
+    - ma|xiaojuan
+  venue: CHI 2023
+  year: 2023
+  img: publications/coargue.png
+  links:
+    doi: https://doi.org/10.1145/3544548.3580932
+    code: https://github.com/Zascc/CoArgue-CHI2023
+    presentation: https://www.youtube.com/watch?v=IHpk1gJ8WYs
+- title:
+    "PlanHelper: Supporting Activity Plan Construction with Answer Posts in Community-based
+    QA Platforms"
   short: PlanHelper
   authors:
-  - liu|chengzhong
-  - huang|zeyu
-  - liu|dingdong
-  - zhou|shixu
-  - peng|zhenhui
-  - ma|xiaojuan
+    - liu|chengzhong
+    - huang|zeyu
+    - liu|dingdong
+    - zhou|shixu
+    - peng|zhenhui
+    - ma|xiaojuan
   venue: CSCW 2022
   year: 2022
   img: publications/planhelper.png
@@ -16,16 +33,17 @@
     doi: https://doi.org/10.1145/3555555
     code: https://github.com/fhfuih/PlanHelper-CSCW2022
     presentation: https://youtube.com/watch?v=QKKAxLa8-mU&feature=shares
-- title: 'MetaMap: Supporting Visual Metaphor Ideation through Multi-dimensional Example-based
-    Exploration'
+- title:
+    "MetaMap: Supporting Visual Metaphor Ideation through Multi-dimensional Example-based
+    Exploration"
   short: MetaMap
   authors:
-  - kang|youwen
-  - sun|zhida
-  - wang|sitong
-  - huang|zeyu
-  - wu|ziming
-  - ma|xiaojuan
+    - kang|youwen
+    - sun|zhida
+    - wang|sitong
+    - huang|zeyu
+    - wu|ziming
+    - ma|xiaojuan
   venue: CHI 2021
   year: 2021
   img: publications/metamap.jpg
