@@ -1,10 +1,12 @@
 ---
-title: "魁北克省单人模式游记之一：Bonjour & Merci"
+title: "Québec Solo Trip Journal 1: Bonjour & Merci"
 date: 2020-02-23T18:51:58-05:00
 featured_image: quebec-travel-notes-1.jpg
-summary: 几个小时简单的市中心徒步，就已经让我意识到了蒙特利尔的特点： 在这里很难找到像多伦多的 Yonge St. 那样宽阔平坦的大道， 街道普遍不宽、建筑装修也更复古，颇有一番欧洲风味。
+summary: (This article is in Chinese) 几个小时简单的市中心徒步，就已经让我意识到了蒙特利尔的特点： 在这里很难找到像多伦多的 Yonge St. 那样宽阔平坦的大道， 街道普遍不宽、建筑装修也更复古，颇有一番欧洲风味。
 lang: zh-cn
 ---
+
+> This article is in Chinese.
 
 由于功课做的太晚，在春假前两天才开始做准备，所有铁路票早就售罄（而且 viarail 网站也在维护，暂时不能网上订票），这次旅游只能窝在巴士上面打瞌睡了。好在加拿大的鸡肋火车跑的和巴士一样快，价格却贵了好多，看到这里心里也就平衡了一些。这样看来坐巴士的唯一缺点恐怕就是转乘有点多、座位有点挤了吧。
 

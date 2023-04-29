@@ -1,9 +1,11 @@
 ---
-title: "魁北克省单人模式游记之四：Petit"
+title: "Québec Solo Trip Journal 4: Petit"
 date: 2020-02-23T19:04:28-05:00
 featured_image: quebec-travel-notes-4.jpg
-summary: 青旅每天早上都有一个老城讲解活动，费用是自愿出钱，没有定价的。我们的导游是一个友好的老太太，一路走一路补充了很多魁北克省的历史。
+summary: (This article is in Chinese) 青旅每天早上都有一个老城讲解活动，费用是自愿出钱，没有定价的。我们的导游是一个友好的老太太，一路走一路补充了很多魁北克省的历史。
 ---
+
+> This article is in Chinese.
 
 青旅附近有一个叫 Paillard 的面包店，打着 “第一可颂” 的名号应该不会太差。9 刀的可颂三明治套餐的确挺好吃，拿来当早饭可以吃的非常饱。其实我在魁北克城的后面几天，早饭都是在他们家吃的，把菜单上几个考前的 combo 都试了一遍。
 
