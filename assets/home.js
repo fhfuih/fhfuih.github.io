@@ -32,6 +32,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /* Fancy long press avatar */
+    const avatarWidget = document.getElementById('avatar-widget')
+    const avatarCircle = /** @type SVGCircleElement */ avatarWidget.querySelector('#avatar-circle circle')
+    const handleAvatarAnimStart = () => {
+        if (avatarWidget.classList.contains('animating') || avatarWidget.classList.contains('animated')) {
+            console.log("animation skipped");
+            return
+        }
+
+        /* start anim */
+        console.log("animation start");
+        avatarWidget.classList.add('animating')
+        const totalTime = 5000;
+        const updateTime = 500;
+        const totalLength = parseFloat(avatarCircle.getAttribute('stroke-dasharray'));
+        const progressInterval = setInterval(() => {
+            const offset = avatarCircle.style.strokeDashoffset || totalLength
+            const newOffset = offset - totalLength / (totalTime / updateTime)
+            avatarCircle.style.strokeDashoffset = newOffset
+            if (newOffset <= 0) {
+                avatarWidget.dispatchEvent(new CustomEvent('MyAnimationEnd'))
+                clearInterval(progressInterval)
+                avatarCircle.style.transitionDuration = '1s'
+                avatarCircle.style.strokeDashoffset = -totalLength
+            }
+        }, updateTime);
+
+        /* configure anim finish listener */
+        const handleAvatarAnimEnd = () => {
+            handleAvatarAnimAbort()
+            avatarWidget.classList.add('animated')
+            console.log("animation ended");
+
+            const glassesTempl = document.getElementById('avatar-glasses')
+            const glasses = glassesTempl.content.firstElementChild.cloneNode(true)
+            const avatarBox = avatarWidget.getBoundingClientRect()
+            avatarWidget.appendChild(glasses)
+            glasses.animate([
+                {
+                    // transform: 'translate(-100%, 0)',
+                    top: `-${avatarBox.top / avatarBox.height * 100}%`,
+                },
+                {
+                    // transform: 'translate(0, 0)',
+                    top: '26.5%',
+                },
+            ], 8000)
+        }
+
+        /* configure abort anim listener */
+        const handleAvatarAnimAbort = (e) => {
+            if (e) {
+                console.log("animation abort due to", e.type)
+                clearInterval(progressInterval)
+                avatarCircle.style.strokeDashoffset = totalLength
+            }
+            avatarWidget.removeEventListener('MyAnimationEnd', handleAvatarAnimEnd)
+            document.removeEventListener('mouseup', handleAvatarAnimAbort)
+            avatarWidget.classList.remove('animating')
+        }
+
+        document.addEventListener('mouseup', handleAvatarAnimAbort)
+        avatarWidget.addEventListener('MyAnimationEnd', handleAvatarAnimEnd)
+    }
+    avatarWidget.addEventListener('mousedown', handleAvatarAnimStart)
+
     /* Pub image collapse on mobile */
     const pubImgList = Array.from(document.getElementsByClassName('pub-img-wrapper'))
     const pubImgBtnList = pubImgList.map(e => e.getElementsByClassName('pub-img-collapser')[0])

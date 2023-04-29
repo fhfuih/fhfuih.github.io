@@ -83,12 +83,26 @@
         </div>
         <div class="intro-right">
             {{ $avatar := resources.Get "avatar.jpg" }}
-            {{ if $avatar }}
-                <img src="{{ $avatar.RelPermalink }}" class="avatar"
-                    loading="lazy" alt="A very handsome face">
-            {{ else }}
+            {{ if not $avatar }}
                 {{ errorf "Failed loading avatar from %q" . }}
             {{ end }}
+            <div id="avatar-widget">
+                <div id="avatar-wrapper">
+                    <img src="{{ $avatar.RelPermalink }}"
+                        id="avatar" class="avatar" loading="lazy"
+                        alt="A very handsome face of mine">
+                </div>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="avatar-circle">
+                    <circle cx="50" cy="50" r="47" stroke-width="2" stroke-dasharray="295.3"/>
+                </svg>
+                {{ $avatarGlasses := resources.Get "glasses.png" }}
+                {{ if $avatarGlasses }}
+                <template id="avatar-glasses">
+                    <img src="{{ $avatarGlasses.RelPermalink }}"
+                        alt="A pair of handsome glasses that you put on my avatar by an awesome long-press" class="avatar-glasses">
+                </template>
+                {{ end }}
+            </div>
         </div>
     </section>
 

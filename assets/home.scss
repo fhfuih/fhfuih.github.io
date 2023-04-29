@@ -196,12 +196,63 @@ body.home {
             flex-basis: 200px;
         }
     }
+
+    #avatar-widget {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #avatar-wrapper {
+        transition: transform .1s;
+    }
+
+    .animating #avatar-wrapper {
+        transform: scale(0.9) rotate(10deg);
+    }
+
     .avatar {
         border-radius: 50%;
         width: 100%;
         min-width: 150px;
         height: auto;
+        transition: transform .3s;
     }
+
+    .animating .avatar {
+        animation: jiggle .1s linear 0s infinite alternate;
+    }
+
+    #avatar-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        fill: none;
+        transform: rotate(-90deg);
+    }
+
+    #avatar-circle circle {
+        stroke: var(--accent-color);
+        stroke-linecap: round;
+        stroke-dashoffset: 295.3;
+        transition: all .2s ease-in-out;
+    }
+
+    .avatar-glasses {
+        position: absolute;
+        top: 26.5%;
+        left: 56.5%;
+        width: 18%;
+    }
+
     .social-menu {
         align-items: center;
 
@@ -623,5 +674,27 @@ body.home {
     // More utilities
     .icon-button {
         display: flex;
+    }
+}
+
+@keyframes anim {
+    0% {
+        width: 40px;
+        transform: translate(20px, 0);
+    }
+
+    100% {
+        width: 14px;
+        transform: translate(60px, 0);
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(10deg);
     }
 }
