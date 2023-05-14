@@ -16,6 +16,7 @@ languages:
       waline:
         serverURL: https://comments.yellowzeyu.com/
         lang: zh-CN
+        emoji: false
         requiredMeta:
           - nick
           - mail
@@ -32,6 +33,7 @@ languages:
       waline:
         serverURL: https://comments.yellowzeyu.com/
         lang: en
+        emoji: false
         requiredMeta:
           - nick
           - mail
