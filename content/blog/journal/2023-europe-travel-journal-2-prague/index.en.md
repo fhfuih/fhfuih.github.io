@@ -1,5 +1,5 @@
 ---
-title: "2023 Europe Travel Journal 2 Prague"
+title: "2023 Europe Travel Journal 2: Prague"
 date: 2023-04-29T23:31:34+02:00
 lang: en
 tags:

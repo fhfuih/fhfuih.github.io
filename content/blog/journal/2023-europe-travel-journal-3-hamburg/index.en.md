@@ -1,10 +1,10 @@
 ---
-title: "2023 Europe Travel Journal 3 Hamburg"
+title: "2023 Europe Travel Journal 3: Hamburg"
 date: 2023-05-07T00:54:42+03:00
 lang: en
 tags:
   - Travel
-summary: (This article is in Chinese) 堡是一座水做的城市。
+summary: (This article is in Chinese) 汉堡是一座水做的城市。
 ---
 
 > This article is in Chinese
