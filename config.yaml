@@ -10,37 +10,39 @@ languages:
     title: 黄泽宇的个人网站
     copyright: 黄泽宇（HUANG Zeyu）
     # stack-theme comments
-    comments:
-      enabled: true
-      provider: waline
-      waline:
-        serverURL: https://comments.yellowzeyu.com/
-        lang: zh-CN
-        emoji:
-          - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji
-        requiredMeta:
-          - nick
-          - mail
-        wordLimit: [5, 300]
-        turnstileKey: 0x4AAAAAAAEuM1PYiEo4yqeY
+    params:
+      comments:
+        enabled: true
+        provider: waline
+        waline:
+          serverURL: https://comments.yellowzeyu.com/
+          lang: zh-CN
+          emoji:
+            - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji
+          requiredMeta:
+            - nick
+            - mail
+          wordLimit: [5, 300]
+          turnstileKey: 0x4AAAAAAAEuM1PYiEo4yqeY
   en:
     languageName: English
     hasCJKLanguage: false
     title: HUANG Zeyu's Website
     # stack-theme comments
-    comments:
-      enabled: true
-      provider: waline
-      waline:
-        serverURL: https://comments.yellowzeyu.com/
-        lang: en
-        emoji:
-          - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji
-        requiredMeta:
-          - nick
-          - mail
-        wordLimit: [5, 300]
-        turnstileKey: 0x4AAAAAAAEuM1PYiEo4yqeY
+    params:
+      comments:
+        enabled: true
+        provider: waline
+        waline:
+          serverURL: https://comments.yellowzeyu.com/
+          lang: en
+          emoji:
+            - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji
+          requiredMeta:
+            - nick
+            - mail
+          wordLimit: [5, 300]
+          turnstileKey: 0x4AAAAAAAEuM1PYiEo4yqeY
 
 menu:
   social:
@@ -71,21 +73,6 @@ params:
   featuredImageField: featured_image
   citation_author: Huang, Zeyu
   # stack-theme comments
-  comments:
-    enabled: true
-    provider: waline
-    waline:
-      serverURL: https://comments.yellowzeyu.com/
-      lang: zh-CN
-      # avatar:
-      # emoji:
-      #     - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
-      requiredMeta:
-        - name
-        - email
-        # - url
-      # locale:
-      #     admin: Admin
 
 markup:
   goldmark:
