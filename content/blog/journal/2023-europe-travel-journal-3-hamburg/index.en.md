@@ -5,6 +5,7 @@ lang: en
 tags:
   - Travel
 summary: (This article is in Chinese) 汉堡是一座水做的城市。
+featured_image: cover.jpg
 ---
 
 > This article is in Chinese

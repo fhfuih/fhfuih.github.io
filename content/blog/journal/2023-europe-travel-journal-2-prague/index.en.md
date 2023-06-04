@@ -5,6 +5,7 @@ lang: en
 tags:
   - Travel
 summary: (This article is in Chinese) 构成布拉格热闹的日落的不仅是行人，还有那些顽皮的鸽子，它们有的飞到基督教雕塑的头顶上和手上，有的则在扶手上面亲嘴。如果它们每天都不会厌倦地和布拉格的残阳嬉戏，这又何尝不是一种幸福呢！
+featured_image: cover.jpg
 ---
 
 > This article is in Chinese

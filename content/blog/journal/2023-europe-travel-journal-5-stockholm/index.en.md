@@ -5,6 +5,7 @@ lang: en
 tags:
   - Travel
 summary: (This article is in Chinese) 斯德哥尔摩的行程无疑是我们整趟路途中浓墨重彩的一笔，因为我们在完全没有计划的前提下，碰巧遇上了国王的生日和一个传统节日。斯德哥尔摩是一个多面的城市，市中心现代化的一面、老城区古朴典雅的一面、还有城中星罗棋布的静谧一面，在我们的眼前徐徐展开。
+featured_image: cover.jpg
 ---
 
 > This article is in Chinese

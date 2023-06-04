@@ -5,6 +5,7 @@ lang: en
 tags:
   - Travel
 summary: (This article is in Chinese) 原来丹麦语中 havn 是港口的意思，而哥本哈根则是贸易港口的意思。这样一个繁华的名称倒是和我实际感受到的丹麦相去甚远。在哥本哈根，我时常松弛到忘记自己身处一个国家的首都。走在这座城市实际上很安静，那或许是丹麦人民和悠悠海浪一起呼吸。
+featured_image: cover.jpg
 ---
 
 > This article is in Chinese

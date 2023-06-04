@@ -5,6 +5,7 @@ lang: en
 tags:
   - Travel
 summary: (This article is in Chinese) 奥斯陆给人的感觉是一种弛放的状态，没有太多让人眼花缭乱的景象，但是溪水也是动的，飞鸟也是动的，沿街店铺粉饰的丰富色彩也是仿佛要跳脱墙壁一般动态的，这里的一切共同构成了这座城市轻盈松弛的脉搏。
+featured_image: cover.jpg
 ---
 
 > This article is in Chinese
