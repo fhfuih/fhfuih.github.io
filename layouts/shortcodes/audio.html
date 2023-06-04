@@ -1,0 +1,4 @@
+<figure>
+    <audio src='{{ .Get "src" }}' controls controlslist="nodownload nofullscreen"></audio>
+    {{ with .Get "caption" }}<figcaption><p>{{ . }}</p></figcaption>{{ end }}
+</figure>
