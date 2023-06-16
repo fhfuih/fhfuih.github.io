@@ -61,16 +61,6 @@ menu:
     # params:
     #   icon: null
 
-related:
-  includeNewer: true
-  indices:
-    - name: keywords
-      weight: 100
-    - name: date
-      weight: 10
-  threshold: 80
-  toLower: false
-
 params:
   favicon: /favicon.ico
   mainSections:
