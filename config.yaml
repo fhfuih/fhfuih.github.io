@@ -50,7 +50,6 @@ menu:
       url: https://github.com/fhfuih
       params:
         icon: brand-github
-        # newTab: false
     - name: LinkedIn
       url: https://www.linkedin.com/in/zeyu-huang-522a52178/
       params:
@@ -61,6 +60,16 @@ menu:
         icon: orcid
     # params:
     #   icon: null
+
+related:
+  includeNewer: true
+  indices:
+    - name: keywords
+      weight: 100
+    - name: date
+      weight: 10
+  threshold: 80
+  toLower: false
 
 params:
   favicon: /favicon.ico
