@@ -58,6 +58,10 @@ menu:
       url: https://orcid.org/0000-0001-8199-071X
       params:
         icon: orcid
+    - name: bilibili
+      url: https://space.bilibili.com/7605906
+      params:
+        icon: brand-bilibili
     # params:
     #   icon: null
 
