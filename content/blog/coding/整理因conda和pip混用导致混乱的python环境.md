@@ -1,6 +1,6 @@
 ---
 title: "整理因conda和pip混用导致混乱的python环境"
-date: 2022-04-04T19:50:4408:00
+date: 2022-04-04T19:50:44+08:00
 draft: true
 lang: zh-cn
 ---

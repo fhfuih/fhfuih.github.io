@@ -1,8 +1,8 @@
 ---
-title: "Differences between the Contexts of Chrome Extension Scripts"
-date: 2022-08-30T19:50:4408:00
-draft: true
+title: "Different Contexts of Chrome Extension Scripts"
+date: 2023-08-30T16:00:00+08:00
 lang: en
+draft: false
 categories: []
 tags:
   - Chrome

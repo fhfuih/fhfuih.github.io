@@ -1,7 +1,8 @@
 ---
 title: "Chrome 扩展程序不同脚本的上下文区别"
-date: 2022-08-30T19:50:4408:00
+date: 2023-08-30T16:00:00+08:00
 lang: zh-cn
+draft: false
 categories: []
 tags:
   - Chrome
