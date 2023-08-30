@@ -296,6 +296,7 @@ body.home {
     #site-nav-wrapper {
         padding: 1rem 2rem;
         background-color: var(--body-background);
+        transition: background-color 0.3s ease;
     }
 
     #site-nav {
@@ -330,11 +331,7 @@ body.home {
             var(--scroll-shadow-color),
             rgba(0, 0, 0, 0) var(--scroll-shadow-width)) center right;
         background-repeat: no-repeat;
-        background-attachment: local,
-        local,
-        scroll,
-        scroll;
-        transition: background 0.3s ease;
+        background-attachment: local, local, scroll, scroll;
     }
 
     #site-nav-list {
