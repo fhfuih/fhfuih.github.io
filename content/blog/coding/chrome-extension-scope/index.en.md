@@ -9,13 +9,14 @@ tags:
   - browser extension
   - JavaScript
   - CSS
+summary: Had you ever written a Chrome browser extension, you must have been struggling to differenciate the contexts of every script file in your project.  There are *content scripts*, *background scripts*, scripts in a popup page, and even more!
 ---
 
 Had you ever written a Chrome browser extension,
 you must have been struggling to differenciate the
 contexts of every script file in your project.
 There are *content scripts*, *background scripts*,
-and scripts in a popup page.
+scripts in a popup page, and even more!
 Chrome's official documentation have never systematically compared
 their differences;
 and due to their so called "safety concern",
