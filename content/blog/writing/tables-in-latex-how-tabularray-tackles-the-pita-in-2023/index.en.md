@@ -2,7 +2,6 @@
 title: "Tables in LaTeX – How tabularray Tackles the PITA in 2023"
 date: 2023-01-13T22:38:52+08:00
 lang: zh-cn
-draft: true
 tags:
     - latex
 summary: >
@@ -98,14 +97,15 @@ We can a `threeparttable` environment between the `table` and the `tabular` to d
 7. Multi-page tables require the `longtable` package. Replace `tabluar` environment with `longtable`.
     * Does it cover the additional features from `tabularx` and others? Again, I don't know!
 
-## `tabularray` 实践
+## The `tabularray` Way
 
-`tabularray` 是一个新晋的 LaTeX 表格库，因为使用了最新的 expl3 编程语法实现（本来为下一代 LaTeX 生态 LaTeX3 设计，后来提前加入在当前的 LaTeX2e 版本中），
-可以比较精炼高效地开发更加丰富的表格功能。
-和繁琐的近现代实践相比，`tabularray` 最大的魅力就在于上述需求它全部能搞定，语法还更加简洁。
-对绝大部分常见的表格宏包新增功能，它也提供了这些功能的语法和实现，所以迁移成本和学习成本也不高。
+`tabularray` is a new LaTeX package for writing tables.
+Because it uses newer expl3 language to implement,
+its developers can efficiently add abundant features.
+The most prominent charm of `tabularray` is that it can handle all the features mentioned above with a simpler syntax,
+and it has a very friendly learning curve.
 
-换行直接把单元格内容括起来，然后同样用 `\\` 换行即可，非常易读。
+To add a wrap within a cell, simply surround the cell with braces and add `\\`. It is easy to write and read.
 
 ```latex
 % ...
@@ -113,43 +113,52 @@ cell & { multiline \\ cell } & cell \\
 % ...
 ```
 
-它把行和列的很多配置同等化了，于是合并单元格不用嵌套 `\multicolumn` 和 `\multirow` 了
+It unifies manyh row configurations and column configurations, and there is no more nested `\multicolumn` and `\multirow` for cell combinations.
 
 ```latex
-\SetCell[r=2,c=3] this big cell & %...
+some cell & \SetCell[r=2,c=3] a big cell & %...
 ```
 
-配置水平对齐和垂直对齐也可以通过给基础 columntype `Q` 加参数而得
+Horizontal and vertical alignment can be realized by adding optional parameters to its fundamental columntype `Q`.
 
 ```latex
+% a top-left-aligned column, and a center-middle-aligned column
 \begin{tblr}{ Q[t,l] Q[c,m] }
+%...
+\end{tblr}
 ```
 
-`Q` 里面传入的参数是无序的列表。控制左右对齐的关键词有 `l`eft（左）、`r`ight（右）、`c`enter（中）；
-控制上下对齐的关键词有 `m`iddle（中）、`h`ead（文字框上边顶到行上边线）、`f`oot（文字框下边顶到行下边线）、
-`t`op（文字框上边顶到基线）、`b`ottom（文字框下边顶到基线）。
-其实 `Q` 是该宏包的唯一一个基础 columntype，其他的诸如 `l`、`p{}`、`X` 都是基于 `Q` 实现的。
-除了左右对齐的关键词之外，颜色、边距等等都可以往里面传。
+The parameters passed to `Q` is an unordered list.
+The keywords for horizontal alignment include `l`eft, `r`ight, `c`enter;
+and those for vertical alignment include 
+`m`iddle, `h`ead (text box top aligned with row top),
+`f`oot (text box bottom aligned with the row bottom),
+`t`op (text box top aligned with baseline),
+`b`ottom (text box bottom aligned with baseline).
+In fact, `Q` is the only and the most fundamental columntype in this package.
+Other regular types like `l`, `p{}`, `X` are reimplemented based on `Q`.
+Apart from alignment keywords, other keywords controlling colors and gutters are also accepted.
 
-除了常规的的 `tblr` 环境，该宏包还提供了一个 `longtblr` 环境，这个环境包括了换页和表格脚注等等功能。
+Apart from the regular `tblr` environment,
+it also provides another `longtblr` environment with automatic page breaks and table footnotes.
 
 ```latex
 \begin{longtblr}[
     caption = {The Table Caption},
     entry = {Short Caption},
     label = {tblr:test},
-    note{$\dag$} = {一个表格脚注，note的参数为引用时使用的上标符号},
-    remark{注意了} = {一个不需要在表格正文中上标引用的脚注},
+    note{$\dag$} = {A table note. The note's symbol is passed as an argument for `note`},
+    remark{Pay attention!} = {A table note with no reference in the main table},
 ]{XXX}
     cell & cell & cell\note{$dag$}
 \end{longtblr}
 ```
 
-对于更精细的样式控制， `tabularray` 更是有一个绝活
+For finer formatting, `tabularray` has something else in its sleeves.
 
 ```latex
 \begin{tblr}{
-    colspec = {XXX}, % 这是本来传入 tblr 的参数
+    colspec = {XXX}, % this is the argument originally (i.e., by default) passed to tblr
     rowspec={|Q[t]|Q[m]|Q[b]|},
     width = 0.85\linewidth,
     col{odd} = {gray9},
@@ -163,36 +172,58 @@ cell & { multiline \\ cell } & cell \\
 \end{tblr}
 ```
 
-把本来传入 `tblr` 环境的表列属性参数放到 `colspec` 下，原来还可以给 `tlbr` 传入这么多其他的参数！
-正如我前面说的， `tabularray` 宏包让行与列的配置平起平坐，所以我们可以像传入 `colspec` 一样传入 `rowspec`，此处的 `|` 指的就是横向框线！
-也可以单独传入 `hlines` 参数打开横向框线，就不需要在正文里面每行写一次了。
-此外，可以单独选中某一（几）行、某一（几）列、或者某一块区域的单元格，并为它们设置样式。
-本来需要自定义 columntype 才能实现的单元格样式自定义，也只需要定义一个 `\newcommand` 然后传进 `cmd=` 参数即可。
+We can put the columntypes inside a named `colspec` parameter, and then we can use more named parameter when creating a `tblr` environment!
+As I said before, this package wants to make columns and rows as equal as possible.
+So we can declare `rowspec` the same way as we declare `colspec`,
+and the `|` here means the horizontal lines!
+We can also pass an `hlines` argument to turn on horizontal lines globally,
+so we don't need to write once for every row.
+What's more, we can also select specific rows, columns, or cells,
+and configure their formatting.
+It used to be hard to set complex formats for columns
+and we used to customize a columntype.
+Now we can simply define a command to be applied to every cell,
+and pass this command to the `cmd=` parameter.
 
+Lastly, the code sinppet above is easy to read.
+It separates format declaration from the actual content,
+and provides a simple indexing syntex.
 最后，上述代码也十分易读，不仅把样式和内容抽离，还提供了方便的索引等等语法。
 
-## `tabularray` 的缺陷
+## Shortcomings of `tabularray`
 
-灵活的功能也有一些代价，就是 `tabularray` 和传统的表格生态的兼容性稍差。
-作为补偿，它提供了一些兼容性的语法和实现，但这仍然和大众写法不一样，导致我们需要停留在 `tabularray` 的体系内。
-例如 `\newcolumntype` 需要改写成 `\NewColumnType`，`booktabs` 等宏包要使用 `\UseTblrLibrary{booktabs}` 来引入。
+On the opposite side of flexibility is the lack of perfect compatibility with traditional table "ecosystem".
+As a compensation, `tabularray` offers some substitutional syntax.
+But it is not identical to the traditional – or common – way of writing tables,
+and we have to keep our feet inside the "`tabularray` ecosystem".
+For example,
+`\newcolumntype` is now `\NewColumnType`,
+and packages like `booktabs` are imported using `\UseTblrLibrary{booktabs}`.
 
-鉴于这个宏包在设计理念上面延展了传统的 LaTeX 表格，我觉得这种专用写法本身尚可接受，它显式区分了该宏包的体系和传统的表格体系。
+Since the package still borrows (and extends instead of replaces) the design of traditional LaTeX tables,
+I am open to these mandatory changes personally,
+and they explicitly distinguish themselves from the "traditional ecosystem".
 
-但是如果真的因为混用导致了报错，该宏包在这些兼容性上的报错有些一头雾水。
-加上这个库比较新，网上不一定能查到解决方案。
-遇到表格相关的问题最好还是直接查阅 [`tabularray` 的文档](http://mirrors.ctan.org/macros/latex/contrib/tabularray/tabularray.pdf)。
+However,
+if there *are* errors caused by the mixed usage mentioned above,
+the error messages are sometimes quite confusing.
+Considering this packages is rather new,
+it can be hard to find an answer online.
+If you encounter any confusing problems,
+a good alternative is to directly go to the [official `tabularray` documentation](http://mirrors.ctan.org/macros/latex/contrib/tabularray/tabularray.pdf)。
 
-## 一些额外感想
+## Additional Thoughts
 
-* 在 LaTeX 中，硬写死列宽没什么大不了，因为 LaTeX 输出的文档尺寸是固定的、字体也是指定的。
-我写网页写习惯了， 一开始会把响应式设计的思想带到 LaTeX 里面，觉得写死宽度很脏。
-其实不然。
-* 对于标题列，什么时候在正文单元格里换行，什么时候在标题单元格里合并单元格？
-如果一个正文单元格内含的条目数量没有很固定，则采用前者，在论文修改过程中给某一格正文加行减行，周围单元格可以自动伸缩。
-如果一个正文单元格内含的条目数量比较固定，则用后者，大多是有二重标题列的时候，这样 LaTeX 代码更明确，脑海里知道排出来长什么样。
+* In LaTeX, it is actually not a big deal to hardcode tables' column widths. Because LaTeX always generate a fixed-size document with fixed fonts.
+I am quite used to writing web pages, where we never assume the font and the viewport dimensions are fixed. In LaTeX, hardcoding dimensions are not that dirty.
+* For cells in header columns, when should we add line wraps in the cell, and when do we combine cells?
+If the number of items (bullet points, cells, etc.) in a table body's cell is not fixed, then we use the former.
+Because whenever we add or remove items in the body's cell, the header column's cells can resize adaptively.
+If the number of items in the body is quite fixed, then we use the latter.
+This is especially applicable to multi-level header columns.
+In this way, we can have a better idea of the table's final appearance in advance.
 
-## 参考
+## References
 
 * https://tex.stackexchange.com/questions/4839/raggedleft-paragraph-in-a-table
 * http://mirrors.ctan.org/macros/latex/contrib/tabularray/tabularray.pdf
