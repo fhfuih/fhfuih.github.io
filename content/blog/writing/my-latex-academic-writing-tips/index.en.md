@@ -3,7 +3,7 @@ title: "My LaTeX Academic Writing Tips"
 date: 2023-10-04T23:45:39+08:00
 lang: en
 tags:
-    - latex
+  - latex
 ---
 
 Here are some of my tips for *collaborative* writing of academic papers in LaTeX.
