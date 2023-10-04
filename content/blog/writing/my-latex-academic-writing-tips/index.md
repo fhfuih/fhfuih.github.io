@@ -1,10 +1,9 @@
 ---
 title: "我的 LaTeX 英文学术论文写作贴士"
-date: 2023-09-15T20:03:10+08:00
+date: 2023-10-04T23:45:42+08:00
 lang: zh-cn
-draft: true
-categories: []
-tags: []
+tags:
+    - latex
 ---
 
 本文我会介绍关于在 LaTeX 中*多人协同*编写英文学术论文的一些贴士。除了讨论 LaTeX 本身，*多人协同*也是本文的另一条暗线。
