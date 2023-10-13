@@ -42,7 +42,7 @@
 {{ $hasProjects := isset $.Site.Data.personal "projects" }}
 {{ $hasExperiences := isset $.Site.Data.personal "experiences" }}
 {{ $hasSkills := isset $.Site.Data.personal "skills" }}
-{{ $hasFacts := isset $.Site.Data.personal "facts" }}
+{{ $hasFacts := true }}
 {{ $hasFriends := isset $.Site.Data.personal "friends" }}
 {{ $pages := .Site.RegularPages }}
 {{ range .Site.Home.Translations }}
