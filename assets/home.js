@@ -32,6 +32,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Switch card-tabs accordions
+    document.querySelectorAll('.card.stacked.transition').forEach((card, index) => {
+        if (index == 0) {
+            card.parentElement.style.zIndex = 'calc(var(--l) + 1)'
+        } else if (index == 1) {
+            card.parentElement.style.zIndex = 'var(--l)'
+        }
+
+        card.addEventListener('animationend', () => {
+            card.classList.remove('animating', 'up', 'down')
+        })
+
+        card.addEventListener('animationiteration', () => {
+            if (card.classList.contains('up')) {
+                card.parentElement.style.zIndex = 'calc(var(--l) + 1)'
+            } else if (card.parentElement.style.zIndex.startsWith('calc')) {
+                card.parentElement.style.zIndex = 'var(--l)'
+            } else {
+                card.parentElement.style.zIndex = ''
+            }
+        })
+    })
+    const cardTabButtons = document.querySelectorAll('#fun-fact-tabs > button')
+    function handleTabButtonClick(event) {
+        const { currentTarget: target } = event
+        const { group } = target.dataset
+        const targetCardId = target.getAttribute('aria-controls')
+        const targetCard = document.getElementById(targetCardId)
+
+        const allButtons = cardTabButtons
+        allButtons.forEach(button => {
+            button.setAttribute('aria-expanded', 'false')
+        })
+        target.setAttribute('aria-expanded', 'true')
+
+        const otherCards = document.querySelectorAll(`.stacked[data-group="${group}"]:not(#${targetCardId})`)
+        targetCard.classList.add('up', 'animating')
+        otherCards.forEach(e => e.classList.add('down', 'animating'))
+    }
+    cardTabButtons.forEach(button => {
+        button.addEventListener('click', handleTabButtonClick)
+    })
+
     /* Fancy long press avatar */
     const avatarWidget = document.getElementById('avatar-widget')
     const avatarCircle = /** @type SVGCircleElement */ avatarWidget.querySelector('#avatar-circle circle')

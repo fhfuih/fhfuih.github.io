@@ -578,6 +578,49 @@ body.home {
         }
     }
 
+    .card-tabs {
+        display: flex;
+        margin-bottom: 30px;
+        .card {
+            margin-right: 10px;
+            .tab-title {
+                transition: all 0.3s ease;
+            }
+            &:hover:not([aria-expanded="true"]) .tab-title {
+                box-shadow: var(--link-shadow);
+            }
+            &[aria-expanded="true"] {
+                pointer-events: none;
+                .tab-title {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .card-stack {
+        display: flex;
+        position: relative;
+        .card-wrapper {
+            flex: 0 0 80%;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            left: 50%;
+            transform: translateX(calc(var(--n) * -100% - 50%)) rotate(calc(var(--n) * 2deg));
+            z-index: calc(var(--l) - var(--n));
+        }
+        .card-content {
+            margin: auto 0;
+        }
+        .card {
+            height: 100%;
+            display: flex;
+            // transform-origin: 150% 150%;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04), 0px 0px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        }
+    }
+
     // Friend links
     .people-list {
         display: flex;

@@ -18,6 +18,20 @@
     animation-name: fadeOutDown;
 }
 
+.transition.stacked {
+    animation-duration: .6s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+.transition.stacked.up {
+    animation-name: stack-up;
+}
+
+.transition.stacked.down {
+    animation-name: stack-down;
+}
+
 @keyframes slideIn {
     0% {
         max-width: 0;
@@ -87,4 +101,22 @@
     // 100% {
     //     transform: rotate(2520deg);
     // }
+}
+
+@keyframes stack-up {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-60%);
+    }
+}
+
+@keyframes stack-down {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(60%);
+    }
 }

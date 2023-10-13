@@ -1,24 +1,13 @@
-about:
-  other: About
-publications:
-  other: Publications
-projects:
-  other: Projects
-experiences:
-  other: Experiences
-skills:
-  other: Skills
-funFacts:
-  other: Fun Facts
-recentPosts:
-  other: Recent Posts
-friendLinks:
-  other: Friend Links
-blog:
-  other: Blogs
+about: About
+publications: Publications
+projects: Projects
+experiences: Experiences
+skills: Skills
+funFacts: Fun Facts
+recentPosts: Recent Posts
+friendLinks: Friend Links
+blog: Blogs
 
 footer:
-    builtWith:
-        other: Built with {{ .Generator }}
-    designedBy:
-        other: Based on {{ .DesignedBy }}'s {{ .Theme }} Theme
+  builtWith: Built with {{ .Generator }}
+  designedBy: Based on {{ .DesignedBy }}'s {{ .Theme }} Theme

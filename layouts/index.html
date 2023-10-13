@@ -209,11 +209,44 @@
     </section>
     {{ end }}
 
-    {{ with $.Site.Data.personal.facts }}
     <section id="fun-facts">
         <h2>{{T "funFacts"}}</h2>
+        {{ $s := slice "/homepage/my-name" "/homepage/my-hkust-account-name" "/homepage/my-game-collection" }}
+        {{ $length := len $s }}
+        <div class="card-tabs" id="fun-fact-tabs">
+            {{ range $index, $page := $s }}
+            {{ with site.GetPage $page }}
+            <button type="button"
+                    class="card"
+                    id="fun-fact-tab-{{$index}}"
+                    data-group="fun-fact-tabs"
+                    aria-controls="fun-fact-{{$index}}"
+                    aria-expanded="{{if (eq $index 0)}}true{{else}}false{{end}}">
+                <span class="tab-title">{{ .Title }}</span>
+            </button>
+            {{ end }}
+            {{ end }}
+        </div>
+        <div class="card-stack">
+            {{ range $index, $page := $s }}
+            {{ with site.GetPage $page }}
+            <div class="card-wrapper"
+                 style="--n: {{$index}}; --l: {{$length}}">
+                <div class="card stacked transition"
+                     id="fun-fact-{{$index}}"
+                     data-group="fun-fact-tabs"
+                     role="region"
+                     aria-labelledby="fun-fact-tab-{{$index}}">
+                    <div class="card-content">
+                        <h3>{{ .Title }}</h3>
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
     </section>
-    {{ end }}
 
     {{ $pages := .Site.RegularPages }}
     {{/*  {{ range .Site.Home.Translations }}
