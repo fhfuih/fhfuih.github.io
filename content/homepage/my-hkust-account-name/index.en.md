@@ -3,7 +3,6 @@ title: "About My HKUST Account Name"
 date: 2023-04-17T22:17:54+08:00
 lang: en
 headless: true
-draft: true
 ---
 
 If you ever know Mandarin Pinyin or understand Mandarin,

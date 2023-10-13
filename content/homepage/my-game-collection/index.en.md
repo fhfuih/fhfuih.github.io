@@ -3,7 +3,6 @@ title: "My Videogame Collection"
 date: 2023-10-13T15:45:13+08:00
 lang: en
 headless: true
-draft: true
 ---
 
 I am a game player, but not the most typical ones.

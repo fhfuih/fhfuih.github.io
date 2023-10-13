@@ -3,7 +3,6 @@ title: "About My Name"
 date: 2023-04-17T22:15:46+08:00
 lang: en
 headless: true
-draft: true
 ---
 
 My surname, Huang (黄; 黃 in Traditional Chinese), is one of the most common surnames in China.
