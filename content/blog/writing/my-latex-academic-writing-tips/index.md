@@ -14,7 +14,11 @@ tags:
 
 ## 词间空格和句间空格
 
-在 LaTeX 中，句子之间的空格要略宽于单词之间的空格。检测句间的空格的规则非常直白：首先空格必须跟在句号后面（或其他表示句子结束的标点，如感叹号和问号），其次这个句号跟在小写字母后面。如果空格没有跟在句号后面，或者句号前面的字母是大写的，则它是一个普通的单词间空格。例如：
+TeX 在设计之时借鉴了一个可以追溯至 19 世纪的英文排版约定：[句子之间的空格要略宽于单词之间的空格](https://en.wikipedia.org/wiki/History_of_sentence_spacing)。不仅在正常情况下句间空格的长度略微长一点，在当某一行因为两端对齐而需要引入额外空白的时候，也会优先把空白插入在句子之间。
+
+{{<figure src="sentence-spacing.png" alt="一张 LaTeX 文稿的样张截图，其中两个句间空格均长于词间空格，且有一个句间空格尤其长。" caption="一个 LaTeX 文档样例，可以看到句间空格比词间空格长，而且 A 处的句间空格尤其长。">}}
+
+TeX 检测句间的空格的规则非常直白：首先空格必须跟在句号后面（或其他表示句子结束的标点，如感叹号和问号），其次这个句号跟在小写字母后面。如果空格没有跟在句号后面，或者句号前面的字母是大写的，则它是一个普通的单词间空格。例如：
 
 > This work is done by A. Einstein.
 
@@ -151,3 +155,5 @@ As mentioned in Section~\ref{sec:intro}
 
 - [The ACM Publishing System (TAPS) List of Accepted LaTeX Packages](https://www.acm.org/publications/taps/whitelist-of-latex-packages)
 - [What is the proper use of \@ (i.e., backslash-at)?](https://tex.stackexchange.com/questions/22561/what-is-the-proper-use-of-i-e-backslash-at)
+- [History of Sentence Spacing](https://en.wikipedia.org/wiki/History_of_sentence_spacing)
+- [`\frenchspacing` & `\nonfrenchspacing`](https://latexref.xyz/_005cfrenchspacing-_0026-_005cnonfrenchspacing.html)

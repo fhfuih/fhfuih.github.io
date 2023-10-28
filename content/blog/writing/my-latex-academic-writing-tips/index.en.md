@@ -14,7 +14,15 @@ but many tips should also apply to different fields and templates.
 
 ## Inter-word and inter-sentence spaces
 
-In LaTeX, the spaces between sentences are slightly wider than the spaces between words.
+During the initial design of TeX,
+an English typesetting tradition from the 18th century was adopted:
+[the spaces between sentences are longer than the spaces between words](https://en.wikipedia.org/wiki/History_of_sentence_spacing).
+Not only will TeX make sentence spaces longer,
+but when additional space is inserted due to text justification,
+the additional space is more likely to be added to the sentence spaces.
+
+{{<figure src="sentence-spacing.png" alt="A screenshot of a sample LaTeX document. Both two sentence breaks are longer than word breaks, and one sentence break is especially longer." caption="A screenshot of a sample LaTeX document. Both two sentence breaks are longer than word breaks, and the one before "A" is especially longer.">}}
+
 The compiler uses a very straightforward criterion to detect inter-sentence spaces:
 the space must follow a period (or other punctuations signalling the end of a sentence like exclamation marks and question marks),
 and the period follows a lowercase letter.
@@ -301,3 +309,5 @@ and use simple old global search to debug the misconduct in the LaTeX document.
 
 - [The ACM Publishing System (TAPS) List of Accepted LaTeX Packages](https://www.acm.org/publications/taps/whitelist-of-latex-packages)
 - [What is the proper use of \@ (i.e., backslash-at)?](https://tex.stackexchange.com/questions/22561/what-is-the-proper-use-of-i-e-backslash-at)
+- [History of Sentence Spacing](https://en.wikipedia.org/wiki/History_of_sentence_spacing)
+- [`\frenchspacing` & `\nonfrenchspacing`](https://latexref.xyz/_005cfrenchspacing-_0026-_005cnonfrenchspacing.html)
