@@ -21,7 +21,7 @@ Not only will TeX make sentence spaces longer,
 but when additional space is inserted due to text justification,
 the additional space is more likely to be added to the sentence spaces.
 
-{{<figure src="sentence-spacing.png" alt="A screenshot of a sample LaTeX document. Both two sentence breaks are longer than word breaks, and one sentence break is especially longer." caption="A screenshot of a sample LaTeX document. Both two sentence breaks are longer than word breaks, and the one before "A" is especially longer.">}}
+{{<figure src="sentence-spacing.png" alt="A screenshot of a sample LaTeX document. Both two sentence breaks are longer than word breaks, and one sentence break is especially longer." caption="A screenshot of a sample LaTeX document. Both two sentence breaks are longer than word breaks, and the one before \"A\" is especially longer.">}}
 
 The compiler uses a very straightforward criterion to detect inter-sentence spaces:
 the space must follow a period (or other punctuations signalling the end of a sentence like exclamation marks and question marks),

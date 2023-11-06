@@ -66,16 +66,26 @@ menu:
     #   icon: null
 
 params:
+  # Hugo's
   favicon: /favicon.ico
   mainSections:
     - blog
+  # My own
+  citation_author: Huang, Zeyu
+  # Stack Theme
   sidebar:
     avatar:
       local: true
       src: avatar.jpg
   featuredImageField: featured_image
-  citation_author: Huang, Zeyu
-  # stack-theme comments
+  # widgets:
+  #   homepage:
+  #     - type: search
+      # - type: archives
+      #   params:
+      #     limit: 5
+      # - type: categories
+      # - type: tag-cloud
 
 markup:
   goldmark:
