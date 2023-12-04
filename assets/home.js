@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // init
         if (controller.getAttribute('aria-expanded') != 'true') {
-            controller.setAttribute('aria-expand', 'false')
+            controller.setAttribute('aria-expanded', 'false')
             controlled.classList.add('out')
             controlled.classList.remove('animating', 'in')
             controlled.dataset.expanded = false
