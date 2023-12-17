@@ -1,8 +1,7 @@
 ---
 title: "My Dream Elevator"
-date: 2023-11-25T15:47:18+08:00
+date: 2023-12-18T00:40:41+08:00
 lang: en
-draft: true
 tags:
 - Elevator
 ---
