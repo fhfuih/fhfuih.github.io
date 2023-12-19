@@ -1,4 +1,4 @@
-@import '../../themes/stack/assets/scss/breakpoints.scss';
+@import 'breakpoints.scss';
 
 @mixin respond-below($breakpoint) {
     @if not map-has-key($breakpoints, $breakpoint) {
