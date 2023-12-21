@@ -6,6 +6,16 @@
     stroke-width: 2 !important;
 }
 
+.article-page .main-article .article-footer section.article-copyright {
+    text-transform: unset;
+}
+
+.article-page .main-article .article-footer .article-copyright a,
+.article-page .main-article .article-footer .article-lastmod a,
+.site-footer .copyright a {
+    text-decoration: underline;
+}
+
 /* scrollbar styles */
 $scrollbar-size: 3px;
 
