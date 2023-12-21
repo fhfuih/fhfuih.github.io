@@ -82,14 +82,15 @@ params:
       local: true
       src: avatar.jpg
   featuredImageField: featured_image
-  # widgets:
-  #   homepage:
-  #     - type: search
-      # - type: archives
-      #   params:
-      #     limit: 5
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
       # - type: categories
       # - type: tag-cloud
+      # - type: toc
 
 markup:
   goldmark:
