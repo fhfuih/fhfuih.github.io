@@ -1,4 +1,41 @@
 # yaml-language-server: $schema=../../schemas/personal/publications.json
+- title: "Sharing Frissons among Online Video Viewers: Exploring the Design of Affective Communication for Aesthetic Chills"
+  short: FrissonsVideos
+  authors:
+    - huang|zeyu
+    - cao|xinyi
+    - zhang|yuanhao
+    - ma|xiaojuan
+  venue: CHI 2024
+  year: 2024
+  img: publications/frissons.jpg
+  links:
+    doi: https://doi.org/10.1145/3613904.3642818
+    arxiv: https://arxiv.org/abs/2403.01090
+    code: https://github.com/fhfuih/CHI24-Frissons-Online-Videos
+- title: "A Comparative Analysis of Violin and Erhu: Examining the Differences and Similarities through Statistical Analysis of Multiple Musical Excerpts"
+  short: ViolinErhu
+  authors:
+    - song|wenyi
+    - huang|zeyu
+    - horner
+  venue: Proceedings of Meetings on Acoustics (POMA) 2023
+  year: 2023
+  img: publications/violin-erhu.jpg
+  links:
+    doi: https://doi.org/10.1121/10.0023214
+- title: "The Emotional Characteristics of Bass Drums, Snare Drums, and Disengaged Snare Drums with Different Strokes and Dynamics"
+  short: DrumEmotions
+  authors:
+    - huang|zeyu
+    - song|wenyi
+    - ma|xiaojuan
+    - horner
+  venue: Proceedings of Meetings on Acoustics (POMA) 2023
+  year: 2023
+  img: publications/drums.jpg
+  links:
+    doi: https://doi.org/10.1121/10.0023553
 - title: "CoArgue: Fostering Lurkers’ Contribution to Collective Arguments in Community-based QA Platforms"
   short: CoArgue
   authors:

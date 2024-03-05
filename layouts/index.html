@@ -161,7 +161,8 @@
                 <p class="links">
                 {{ with .links }}
                     {{ with .doi }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "brand-safari" }}DOI</a>{{ end }}
-                    {{ with .pdf }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "file-text" }}PDF</a>{{ end }}
+                    {{ with .pdf }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "file-type-pdf" }}PDF</a>{{ end }}
+                    {{ with .arxiv }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "file-pencil" }}arXiv</a>{{ end }}
                     {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
                     {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "code" }}Source Code</a>{{ end }}
                     {{ with .presentation }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "presentation" }}Presentation</a>{{ end }}

@@ -44,6 +44,9 @@
             },
             "project": {
               "type": "string"
+            },
+            "arxiv": {
+              "type": "string"
             }
           },
           "additionalProperties": false
