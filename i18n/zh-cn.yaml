@@ -11,3 +11,9 @@ blog: 博客
 footer:
   builtWith: 由 {{ .Generator }} 驱动
   designedBy: 基于 {{ .DesignedBy }} 的 {{ .Theme }} 主题设计
+
+# Missing translations in the original stack theme source code
+list:
+  page: "{{ .Count }} 个页面"
+  section: 章节
+  subsection: 子章节
