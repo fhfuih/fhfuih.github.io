@@ -13,17 +13,6 @@ languages:
     hasCJKLanguage: true
     title: 黄泽宇的个人网站
     copyright: 黄泽宇（HUANG Zeyu）。在无另外声明时，本网站之内容皆采用 <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:1.15em!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:1.15em!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>（知识共享组织 署名 4.0 国际）公共许可协议。
-    menu:
-      main:
-      - name: 主页
-        pageRef: /
-        params:
-          icon: building-pavilion
-      - name: 博客首页
-        pageRef: /blog
-        weight: 9999
-        params:
-          icon: notebook
     # stack-theme comments
     params:
       # stack theme
@@ -48,17 +37,6 @@ languages:
     languageName: English
     hasCJKLanguage: false
     title: HUANG Zeyu's Website
-    menu:
-      main:
-      - name: Home
-        pageRef: /
-        params:
-          icon: building-pavilion
-      - name: Blog Home
-        pageRef: /blog
-        weight: 9999
-        params:
-          icon: notebook
     # stack-theme comments
     params:
       comments:
@@ -76,6 +54,18 @@ languages:
           turnstileKey: 0x4AAAAAAAEuM1PYiEo4yqeY
 
 menu:
+  main:
+    - name: Home
+      identifier: menu|home
+      pageRef: /
+      params:
+        icon: building-pavilion
+    - name: Blog Home
+      identifier: menu|blog-home
+      pageRef: /blog
+      weight: 9999
+      params:
+        icon: notebook
   social:
     - name: GitHub
       url: https://github.com/fhfuih
@@ -137,4 +127,4 @@ markup:
 capitalizeListTitles: false # do not capitalize section, taxonomy, and term pages not backed by a file
 
 # debug
-enableMissingTranslationPlaceholders: true
+# enableMissingTranslationPlaceholders: true

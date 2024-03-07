@@ -13,4 +13,5 @@
     "[svg]": {
         "editor.formatOnSave": false
     },
+    "svg.preview.background": "editor",
 }

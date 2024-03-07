@@ -12,6 +12,10 @@ footer:
   builtWith: 由 {{ .Generator }} 驱动
   designedBy: 基于 {{ .DesignedBy }} 的 {{ .Theme }} 主题设计
 
+# Menu
+menu|home: 主页
+menu|blog-home: 博客首页
+
 # Missing translations in the original stack theme source code
 list:
   page: "{{ .Count }} 个页面"
