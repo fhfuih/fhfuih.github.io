@@ -68,6 +68,7 @@
   img: publications/planhelper.png
   links:
     doi: https://doi.org/10.1145/3555555
+    pdf: https://zhenhuipeng.com/docs/cscw_2022_planhelper.pdf
     code: https://github.com/fhfuih/PlanHelper-CSCW2022
     presentation: https://youtube.com/watch?v=QKKAxLa8-mU&feature=shares
 - title:
