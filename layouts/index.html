@@ -152,6 +152,11 @@
             </div>
             <div class="pub-main">
                 <h3>{{ .title }}</h3>
+                <div class="pub-awards">
+                {{- range $value := .awards -}}
+                    <span class="pub-award">{{ partial "helper/icon" "award" }}{{ $value }}</span>
+                {{- end -}}
+                </div>
                 <p class="author-line">
                 {{ range $key, $value := .authors }}
                     {{- if ne $key 0 -}}, {{ end -}}

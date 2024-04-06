@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../schemas/network/people.json
+# yaml-language-server: $schema=./people.schema.json
 huang|zeyu:
   given: Zeyu
   family: Huang

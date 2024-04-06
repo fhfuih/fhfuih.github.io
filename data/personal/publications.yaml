@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../schemas/personal/publications.json
+# yaml-language-server: $schema=./publications.schema.json
 - title: "Sharing Frissons among Online Video Viewers: Exploring the Design of Affective Communication for Aesthetic Chills"
   short: FrissonsVideos
   authors:
@@ -36,6 +36,8 @@
   img: publications/drums.jpg
   links:
     doi: https://doi.org/10.1121/10.0023553
+  awards:
+    - Student Paper Competition Winner
 - title: "CoArgue: Fostering Lurkers’ Contribution to Collective Arguments in Community-based QA Platforms"
   short: CoArgue
   authors:

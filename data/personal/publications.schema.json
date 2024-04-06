@@ -50,6 +50,12 @@
             }
           },
           "additionalProperties": false
+        },
+        "awards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "required": [
