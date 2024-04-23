@@ -388,8 +388,20 @@ body.home {
         flex: 1 2;
 
         h3 {
-            margin: 0 0 0.5em;
+            margin: 0 0 0.4em;
         }
+
+        p {
+            margin: 0.5em 0;
+        }
+
+        p.author-line, p.links {
+            margin: 1em 0;
+        }
+    }
+
+    .pub-venue {
+        font-size: 0.9em;
     }
 
     .pub-award {
