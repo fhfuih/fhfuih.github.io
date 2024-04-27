@@ -91,10 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const updateTime = 500;
         const totalLength = parseFloat(avatarCircle.getAttribute('stroke-dasharray'));
         const progressInterval = setInterval(() => {
-            const offset = avatarCircle.style.strokeDashoffset || totalLength
+            let offset = avatarCircle.style.strokeDashoffset || totalLength
+            // Firefox automatically convert pixel value integer to string '<number>px'
+            if (offset.endsWith?.('px')) {
+                offset = parseFloat(offset.slice(0, -2))
+            }
             const newOffset = offset - totalLength / (totalTime / updateTime)
             avatarCircle.style.strokeDashoffset = newOffset
+            console.log("animation update", offset, newOffset);
             if (newOffset <= 0) {
+                console.log("animation end, dispatching MyAnimationEnd");
                 avatarWidget.dispatchEvent(new CustomEvent('MyAnimationEnd'))
                 clearInterval(progressInterval)
                 avatarCircle.style.transitionDuration = '1s'
@@ -136,10 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
             avatarWidget.classList.remove('animating')
         }
 
-        document.addEventListener('mouseup', handleAvatarAnimAbort)
+        let _ = ['mouseup', 'touchend', 'touchcancel'].forEach((eventName) => {
+            document.addEventListener(eventName, handleAvatarAnimAbort)
+        })
         avatarWidget.addEventListener('MyAnimationEnd', handleAvatarAnimEnd)
     }
-    avatarWidget.addEventListener('mousedown', handleAvatarAnimStart)
+    let _ = ['mousedown', 'touchstart'].forEach((eventName) => {
+        avatarWidget.addEventListener(eventName, handleAvatarAnimStart)
+    })
 
     /* Pub image collapse on mobile */
     const pubImgList = Array.from(document.getElementsByClassName('pub-img-wrapper'))
