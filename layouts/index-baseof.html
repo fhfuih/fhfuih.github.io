@@ -5,6 +5,7 @@
         {{- block "head" . -}}{{ end }}
     </head>
     <body class="home">
+        {{ `<!-- Template: layouts/index-baseof.html -->` | safeHTML }}
         {{- partial "head/colorScheme" . -}}
 
         <header>

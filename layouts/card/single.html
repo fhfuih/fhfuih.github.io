@@ -1,0 +1,23 @@
+{{ define "head" }}
+{{ $sass := resources.Get "vcard.scss" }}
+{{ $style := $sass | resources.ToCSS | minify }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+{{ `<!-- Template: layouts/card/single.html -->` | safeHTML }}
+<div class="container-outer">
+    <div class="container-inner">
+        <div class="card-wrapper">
+            <div class="sphere"></div>
+            <div class="sphere"></div>
+            <div class="card">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

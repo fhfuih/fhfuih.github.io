@@ -1,4 +1,5 @@
 {{ define "main" }}
+    {{ `<!-- Template: layouts/blog/blog.html -->` | safeHTML }}
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}

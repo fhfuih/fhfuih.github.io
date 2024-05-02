@@ -38,6 +38,7 @@
 {{ end }}
 
 {{ define "main" }}
+{{ `<!-- Template: layouts/index.html -->` | safeHTML }}
 {{ $hasPublications := isset $.Site.Data.personal "publications" }}
 {{ $hasProjects := isset $.Site.Data.personal "projects" }}
 {{ $hasExperiences := isset $.Site.Data.personal "experiences" }}

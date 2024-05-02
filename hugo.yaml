@@ -67,20 +67,26 @@ menu:
       params:
         icon: notebook
   social:
-    - name: GitHub
-      url: https://github.com/fhfuih
-      params:
-        icon: brand-github
+    # Serious platforms: 0x
     - name: LinkedIn
       url: https://www.linkedin.com/in/zeyu-huang-522a52178/
+      weight: 1
       params:
         icon: brand-linkedin
     - name: ORCiD
       url: https://orcid.org/0000-0001-8199-071X
+      weight: 2
       params:
         icon: orcid
-    - name: bilibili
+    - name: GitHub
+      url: https://github.com/fhfuih
+      weight: 3
+      params:
+        icon: brand-github
+    # Casual platforms: 1x
+    - name: Bilibili
       url: https://space.bilibili.com/7605906
+      weight: 11
       params:
         icon: brand-bilibili
     # params:
@@ -123,6 +129,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+security:
+  enableInlineShortcodes: true
 
 capitalizeListTitles: false # do not capitalize section, taxonomy, and term pages not backed by a file
 
