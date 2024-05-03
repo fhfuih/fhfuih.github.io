@@ -1,5 +1,22 @@
+:root{
+    --body-text-color: #000;
+    --vcard-background: rgba(255, 255, 255, 0.6);
+    --vcard-backdrop-filter: blur(30px) saturate(180%);
+}
+
+[data-scheme="dark"] {
+    --body-text-color: #fff;
+    --vcard-background: rgba(66, 66, 66, 0.6);
+    --vcard-backdrop-filter: blur(30px) saturate(80%);
+}
+
 html, body, main {
     height: 100%;
+}
+
+body {
+    background: var(--body-background);
+    color: var(--body-text-color);
 }
 
 main {
@@ -39,14 +56,16 @@ main {
     height: 100%;
     position: relative;
 
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(30px) saturate(180%);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    border-radius: 6px;
-
     padding: 8% 5% 5%;
     overflow:hidden;
     font-size: 60%; // Every text inside the card will be relative to this size
+
+    border-radius: 6px;
+    color: var(--card-text-color-main);
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: var(--shadow-l3);
+    background-color: var(--vcard-background);
+    backdrop-filter: var(--vcard-backdrop-filter);
 
     address {
         height: 100%;
@@ -82,7 +101,7 @@ main {
     }
 
     .position {
-        font-family: 'Fira Sans Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+        font-family: 'Fira Sans Condensed', var(--base-font-family);
     }
 
     ul.links {
