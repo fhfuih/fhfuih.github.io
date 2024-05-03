@@ -2,7 +2,6 @@
 title: "vCard"
 date: 2024-05-02T10:44:55+08:00
 lang: zh-cn
-draft: true
 layout: plain
 type: card
 ---
@@ -49,10 +48,10 @@ type: card
       href='https://yellowzeyu.com'
       class="icon-button"
       rel="noreferrer noopener"
-      title="Homepage"
+      title="个人主页"
     >
       {{ partial "helper/icon" "building-pavilion" }}
-      <div>Homepage</div>
+      <div>个人主页</div>
     </a>
   </li>
 </ul>

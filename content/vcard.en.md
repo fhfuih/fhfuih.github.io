@@ -3,7 +3,6 @@ title: "vCard"
 date: 2024-05-02T10:45:07+08:00
 lang: en
 draft: true
-layout: plain
 type: card
 ---
 
