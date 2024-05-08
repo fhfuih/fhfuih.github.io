@@ -67,7 +67,7 @@ menu:
       params:
         icon: notebook
   social:
-    # Serious platforms: 0x
+    # Career: 0x
     - name: LinkedIn
       url: https://www.linkedin.com/in/zeyu-huang-522a52178/
       weight: 1
@@ -78,19 +78,18 @@ menu:
       weight: 2
       params:
         icon: orcid
+    # Professional: 5x
     - name: GitHub
       url: https://github.com/fhfuih
-      weight: 3
+      weight: 53
       params:
         icon: brand-github
-    # Casual platforms: 1x
+    # Casual platforms: 10x
     - name: Bilibili
       url: https://space.bilibili.com/7605906
-      weight: 11
+      weight: 101
       params:
         icon: brand-bilibili
-    # params:
-    #   icon: null
 
 params:
   # Hugo's

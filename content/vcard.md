@@ -65,6 +65,17 @@ type: card
       <div>简历</div>
     </a>
   </li>
+  <li>
+    <a
+      href='/en/vcard/'
+      class="icon-button"
+      rel="noreferrer noopener"
+      title="English"
+    >
+      {{ partial "helper/icon" "language" }}
+      <div>English</div>
+    </a>
+  </li>
 </ul>
 {{< /card-links.inline >}}
 

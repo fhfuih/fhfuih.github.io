@@ -68,6 +68,17 @@ type: card
       <div>CV</div>
     </a>
   </li>
+    <li>
+    <a
+      href='/vcard/'
+      class="icon-button"
+      rel="noreferrer noopener"
+      title="简体中文"
+    >
+      {{ partial "helper/icon" "language" }}
+      <div>简体中文</div>
+    </a>
+  </li>
 </ul>
 {{< /card-links.inline >}}
 
