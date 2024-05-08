@@ -207,6 +207,10 @@ body.home {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+
+        &:not(.animated) {
+            cursor: pointer;
+        }
     }
 
     #avatar-wrapper {
