@@ -48,7 +48,7 @@ type: card
   {{ end }}
   <li>
     <a
-      href='https://yellowzeyu.com'
+      href='https://yellowzeyu.com/en/'
       class="icon-button"
       rel="noreferrer noopener"
       title="Homepage"
