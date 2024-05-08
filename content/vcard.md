@@ -54,6 +54,17 @@ type: card
       <div>个人主页</div>
     </a>
   </li>
+  <li>
+    <a
+      href='https://hkustconnect-my.sharepoint.com/:b:/g/personal/zhuangbi_connect_ust_hk/EUkzNK6hR79Gt7vpvmct484BZFsX3HfRbMC7l_GFRKi2oA?e=HftN3l'
+      class="icon-button"
+      rel="noreferrer noopener"
+      title="简历"
+    >
+      {{ partial "helper/icon" "file-cv" }}
+      <div>简历</div>
+    </a>
+  </li>
 </ul>
 {{< /card-links.inline >}}
 

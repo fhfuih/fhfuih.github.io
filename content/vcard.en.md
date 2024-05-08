@@ -57,6 +57,17 @@ type: card
       <div>Homepage</div>
     </a>
   </li>
+  <li>
+    <a
+      href='https://hkustconnect-my.sharepoint.com/:b:/g/personal/zhuangbi_connect_ust_hk/EUkzNK6hR79Gt7vpvmct484BZFsX3HfRbMC7l_GFRKi2oA?e=HftN3l'
+      class="icon-button"
+      rel="noreferrer noopener"
+      title="CV"
+    >
+      {{ partial "helper/icon" "file-cv" }}
+      <div>CV</div>
+    </a>
+  </li>
 </ul>
 {{< /card-links.inline >}}
 
