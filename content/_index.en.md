@@ -8,7 +8,7 @@ My name is Huang Zeyu (<ruby>黄<rp>(</rp><rt>huáng</rt><rp>)</rp>
 泽<rp>(</rp><rt>zé</rt><rp>)</rp>宇<rp>(</rp><rt>yǔ</rt><rp>)</rp></ruby>).
 In Chinese, surnames come first.
 So you can call me Zeyu.
-I am currently a PhD candidate in CSE at the [HCI Lab](http://hci.cse.ust.hk) of [HKUST](https://hkust.edu.hk),
+I am currently a PhD candidate in CSE at the [HCI Lab](https://hci.cse.ust.hk) of [HKUST](https://hkust.edu.hk),
 supervised by [Prof. MA, Xiaojuan](https://www.cse.ust.hk/~mxj/).
 I also do musical acoustic research following [Prof. HORNER, Andrew](https://cse.hkust.edu.hk/~horner/).
 Prior to that, I also earned my Bachelor's Degree in CS and MATH at HKUST.
