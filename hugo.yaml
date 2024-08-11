@@ -98,6 +98,7 @@ params:
     - blog
   # My own
   citation_author: Huang, Zeyu
+  noindex: false
   # Stack Theme
   footer:
     since: 2019

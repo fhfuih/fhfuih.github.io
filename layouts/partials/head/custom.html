@@ -1,4 +1,8 @@
-{{ if eq .Kind "page" }}
+{{- if (default false (.Param "noindex")) -}}
+<meta name="robots" content="noindex" >
+{{- end -}}
+
+{{- if eq .Kind "page" -}}
 <meta name="citation_title" content="{{ .Title }}">
 <meta name="citation_date" content="{{ .Date.Format `2006/01/02` }}">
 {{ if not .Truncated }}
@@ -6,4 +10,4 @@
 {{ end }}
 <meta name="citation_language" content="{{ .Language.Lang }}">
 <meta name="citation_author" content="{{ .Site.Params.citation_author }}">
-{{ end }}
+{{- end -}}

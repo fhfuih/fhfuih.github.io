@@ -4,6 +4,7 @@ date: 2024-05-02T10:44:55+08:00
 lang: zh-cn
 layout: plain
 type: card
+headless: true
 ---
 
 <address>
