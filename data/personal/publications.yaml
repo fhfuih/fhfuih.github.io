@@ -1,4 +1,44 @@
 # yaml-language-server: $schema=./publications.schema.json
+# - title: "Be There, Be Together, Be Streamed! AR Scenic Live-Streaming for an Interactive and Collective Experience"
+#   short: AR Scenic Live-Streaming
+#   authors:
+#     - huang|zeyu
+#     - xu|zuyu
+#     - zhang|yuanhao
+#     - liu|chengzhong
+#     - zhao|yanwei
+#     - shi|chuhan
+#     - zhao|chen
+#     - ma|xiaojuan
+#   venue: 2024 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct 2024)
+#   year: 2024
+#   img: publications/arsls.jpg
+#   links: {}
+- title: "SelfGauge: An Intelligent Tool to Support Student Self-assessment in GenAI-enhanced Project-based Learning"
+  short: SelfGauge
+  authors:
+    - zheng|chengbo
+    - huang|zeyu
+    - ma|shuai
+    - ma|xiaojuan
+  venue: Adjunct Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology (UIST '24 Adjunct)
+  year: 2024
+  img: publications/selfgauge.jpg
+  links: {}
+- title: "DiscipLink: Unfolding Interdisciplinary Information Seeking Process via Human-AI Co-Exploration"
+  short: DiscipLink
+  authors:
+    - zheng|chengbo
+    - zhang|yuanhao
+    - huang|zeyu
+    - shi|chuhan
+    - xu|minrui
+    - ma|xiaojuan
+  venue: Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology (UIST '24)
+  year: 2024
+  img: publications/disciplink.jpg
+  links:
+    arxiv: https://arxiv.org/abs/2408.00447
 - title: "Sharing Frissons among Online Video Viewers: Exploring the Design of Affective Communication for Aesthetic Chills"
   short: FrissonsVideos
   authors:
@@ -13,6 +53,18 @@
     doi: https://doi.org/10.1145/3613904.3642818
     arxiv: https://arxiv.org/abs/2403.01090
     code: https://github.com/fhfuih/CHI24-Frissons-Online-Videos
+- title: "A Comparative Study of Violin and Erhu Emotional Characteristics: Influence of Playing Techniques and Instrument"
+  short: ViolinErhu
+  authors:
+    - song|wenyi
+    - zhou|ziya
+    - huang|zeyu
+    - horner
+  venue: Proceedings of Meetings on Acoustics (POMA) 2024
+  year: 2024
+  img: publications/violin-erhu-technique.jpg
+  links:
+    doi: https://doi.org/10.1121/2.0001921
 - title: "A Comparative Analysis of Violin and Erhu: Examining the Differences and Similarities through Statistical Analysis of Multiple Musical Excerpts"
   short: ViolinErhu
   authors:
