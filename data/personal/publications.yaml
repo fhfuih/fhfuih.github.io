@@ -1,19 +1,20 @@
 # yaml-language-server: $schema=./publications.schema.json
-# - title: "Be There, Be Together, Be Streamed! AR Scenic Live-Streaming for an Interactive and Collective Experience"
-#   short: AR Scenic Live-Streaming
-#   authors:
-#     - huang|zeyu
-#     - xu|zuyu
-#     - zhang|yuanhao
-#     - liu|chengzhong
-#     - zhao|yanwei
-#     - shi|chuhan
-#     - zhao|chen
-#     - ma|xiaojuan
-#   venue: 2024 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct 2024)
-#   year: 2024
-#   img: publications/arsls.jpg
-#   links: {}
+- title: "Be There, Be Together, Be Streamed! AR Scenic Live-Streaming for an Interactive and Collective Experience"
+  short: AR Scenic Live-Streaming
+  authors:
+    - huang|zeyu
+    - xu|zuyu
+    - zhang|yuanhao
+    - liu|chengzhong
+    - zhao|yanwei
+    - shi|chuhan
+    - zhao|chen
+    - ma|xiaojuan
+  venue: 2024 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct 2024)
+  year: 2024
+  img: publications/arsls.jpg
+  links:
+    arxiv: https://arxiv.org/abs/2410.04232
 - title: "SelfGauge: An Intelligent Tool to Support Student Self-assessment in GenAI-enhanced Project-based Learning"
   short: SelfGauge
   authors:
