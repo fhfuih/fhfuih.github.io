@@ -25,7 +25,8 @@
   venue: Adjunct Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology (UIST '24 Adjunct)
   year: 2024
   img: publications/selfgauge.jpg
-  links: {}
+  links:
+    doi: https://doi.org/10.1145/3672539.3686338
 - title: "DiscipLink: Unfolding Interdisciplinary Information Seeking Process via Human-AI Co-Exploration"
   short: DiscipLink
   authors:
@@ -39,6 +40,7 @@
   year: 2024
   img: publications/disciplink.jpg
   links:
+    doi: https://doi.org/10.1145/3654777.3676366
     arxiv: https://arxiv.org/abs/2408.00447
 - title: "Sharing Frissons among Online Video Viewers: Exploring the Design of Affective Communication for Aesthetic Chills"
   short: FrissonsVideos
