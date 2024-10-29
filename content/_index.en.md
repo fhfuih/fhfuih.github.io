@@ -4,10 +4,9 @@ date: 2022-12-12T22:17:19+08:00
 lang: en
 ---
 
-My name is Huang Zeyu (<ruby>黄<rp>(</rp><rt>huáng</rt><rp>)</rp>
+My name is *Huang, Zeyu* (<ruby>黄<rp>(</rp><rt>huáng</rt><rp>)</rp>
 泽<rp>(</rp><rt>zé</rt><rp>)</rp>宇<rp>(</rp><rt>yǔ</rt><rp>)</rp></ruby>).
-In Chinese, surnames come first.
-So you can call me Zeyu.
+In Chinese, surnames come first, so you can call me Zeyu.
 I am a PhD candidate in CSE at the [HCI Lab](https://hci.cse.ust.hk) of [HKUST](https://hkust.edu.hk),
 supervised by [Prof. Xiaojuan Ma](https://www.cse.ust.hk/~mxj/).
 Currently, I am attending a research visit to Georgia Institute of Technology, at the [Future Feelings Lab](https://sites.gatech.edu/futurefeelings/) directed by [Prof. Noura Howell](https://nourahowell.com/) in the Digital Media department.
