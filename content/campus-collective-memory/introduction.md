@@ -15,10 +15,7 @@ Supervisor / Primary Investigator(s): Prof. MA Xiaojuan (mxj@cse.ust.hk)
 
 You are invited to participate in a research study that aims to explore the co-creation of the community's collective memory. You will play with a location-based mobile application with physical exertion (think of Pokemon Go) and the metaphor for memory postcards.
 
-Should you participate in this study,
-- You will be able to use this app in a period of ___
-- We do not require a minimum amount of usage of this app
-- Your posts must be in **a storytelling manner** and **related to your specific memories** of the university and the campus. They need not to be very long or rhetorical, and the topics can be (but not limited to) personal experiences, past events, campus tips, etc. Please **refrain from posting everyday chores without elaboration**.
+Should you participate in this study, **your posts must be in a storytelling manner and related to your specific memories of the university and the campus**, although they need not to be super long or super rhetorical. The topics can be (but not limited to) personal experiences, past events, campus tips, etc. Please **refrain from posting everyday chores without elaboration**.
 
 You will be rewarded 25HKD~75HKD Starbucks HK coupons according to the following criteria:
 * Base (minimum) 25HKD: post ≥4 memories, read ≥12 memories (in total) in ≥8 regions.
