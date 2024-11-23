@@ -1,28 +1,28 @@
 ---
 title: "Campus Collective Memory — Introduction and Requirements"
 date: 2024-11-11T16:51:22+08:00
-lang: en
+lang: zh-cn
 noindex: true
 ---
 
-Title of the Project: Community Co-creation of Collective Memory
+项目标题: Community Co-creation of Collective Memory
 
-Project leader: Mr. HUANG Zeyu (zhuangbi@connect.ust.hk)
+项目负责人: Mr. HUANG Zeyu (zhuangbi@connect.ust.hk)
 
-Supervisor / Primary Investigator(s): Prof. MA Xiaojuan (mxj@cse.ust.hk)
+负责人导师: Prof. MA Xiaojuan (mxj@cse.ust.hk)
 
-> Please read through this page and find the **sign up link at the bottom**.
+> 请阅读完这精致简短的说明，然后**在文章底部点击报名链接**。
 
-You are invited to participate in a research study that aims to explore the co-creation of the community's collective memory. You will play with a location-based mobile application with physical exertion (think of Pokemon Go) and the metaphor for memory postcards.
+我們此次邀請您參與的科研項目，旨在探索校園社群的集體記憶的共創過程。你的主要任務是在近期體驗使用一款手機 App，其有類似 Pokémon Go 的地點探索式交互、一些與“記憶”之概念相關的設計元素、以及 UGC 內容驅動型理念。
 
-Should you participate in this study, **your posts must be in a storytelling manner and related to your specific memories of the university and the campus**, although they need not to be super long or super rhetorical. The topics can be (but not limited to) personal experiences, past events, campus tips, etc. Please **refrain from posting everyday chores without elaboration**.
+若您参与是次用户调研，您在 App 平台上发布的帖子（不包含评论）应当呈现一种**讲述者（讲故事）的风格，并且分享的内容与您个人的校园记忆有关**，只是不一定要很长很华丽。比如，话题可以是（但不限于）经历见闻、思考感想、过往事件、校园贴士等等。请**不要使用过于简短粗糙的词句充数**。
 
-You will be rewarded 25HKD~75HKD Starbucks HK coupons according to the following criteria:
-* Base (minimum) 25HKD: post ≥4 memories, read ≥12 memories (in total) in ≥8 regions.
-* Extra 25HKD: post ≥8 memories, read ≥20 memories (in total) in ≥15 regions.
-* Extra 25HKD: Join a post-interview for around 30 minutes.
-If you are leaving Hong Kong soon and really need stipends in other currencies, please email the project leader to discuss.
+我们将会依照您的 App 使用量而分等级提供报酬。报酬为 25～75 港币不等的香港星巴克代金券。
+* 基础 25HKD：发 ≥4 篇记忆，阅读 ≥8 个区域中的共计 ≥12 篇记忆。
+* 额外 25HKD：发 ≥8 篇记忆，阅读 ≥215 个区域中的共计 ≥20 篇记忆。
+* 额外 25HKD：参与后续访谈，约30分钟。
+若您即将离开香港，切实需要其他货币平台的礼金做报酬，请联系项目负责人商讨。
 
-Data consent: [https://yellowzeyu.com/en/campus-collective-memory/data-consent/](https://yellowzeyu.com/en/campus-collective-memory/data-consent/)
+数据私隐说明：[https://yellowzeyu.com/en/campus-collective-memory/data-consent/](https://yellowzeyu.com/en/campus-collective-memory/data-consent/)
 
-> Sign up: [https://ust.az1.qualtrics.com/jfe/form/SV_bdTANY3Km9WnwI6](https://ust.az1.qualtrics.com/jfe/form/SV_bdTANY3Km9WnwI6)
+> **报名链接：**[https://ust.az1.qualtrics.com/jfe/form/SV_bdTANY3Km9WnwI6](https://ust.az1.qualtrics.com/jfe/form/SV_bdTANY3Km9WnwI6)

@@ -1,7 +1,7 @@
 ---
 title: "Tables in LaTeX – How tabularray Tackles the PITA in 2023"
 date: 2023-01-13T22:38:52+08:00
-lang: zh-cn
+lang: en
 tags:
     - LaTeX
 categories:
