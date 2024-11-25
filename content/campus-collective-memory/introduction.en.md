@@ -7,17 +7,9 @@ noindex: true
 
 上方可以切换语言 / Switch Language
 
-Title of the Project: Community Co-creation of Collective Memory
-
-Project leader: Mr. HUANG Zeyu (zhuangbi@connect.ust.hk)
-
-Supervisor / Primary Investigator(s): Prof. MA Xiaojuan (mxj@cse.ust.hk)
-
 > Please read through this page and find the **sign up link at the bottom**.
 
-You are invited to participate in a research study that aims to explore the co-creation of the community's collective memory. You will play with a location-based mobile application with physical exertion (think of Pokemon Go) and the metaphor for memory postcards.
-
-Should you participate in this study, **your posts (not including comments) must be in a storytelling manner and related to your specific memories of the university and the campus**, although they need not to be super long or super rhetorical. The topics can be (but not limited to) personal experiences, reflections, past events, campus tips, etc. Please **refrain from posting overly short and simple content without elaboration**.
+You are invited to participate in a research study that aims to explore the co-creation of the community's collective memory. You will play with a location-based mobile application with physical exertion (think of Pokemon Go) and the metaphor for memory postcards. You will freely try using the app, posting your own memories related to HKUST and interacting with others' memories.
 
 You will be rewarded 25HKD~75HKD Starbucks HK coupons according to the following criteria:
 * Base (minimum) 25HKD: post ≥4 memories, read ≥12 memories (in total) in ≥8 regions.
