@@ -12,8 +12,8 @@ noindex: true
 You are invited to participate in a research study that aims to explore the co-creation of the community's collective memory. You will play with a location-based mobile application with physical exertion (think of Pokemon Go) and the metaphor for memory postcards. You will freely try using the app, posting your own memories related to HKUST and interacting with others' memories.
 
 You will be rewarded **25HKD~75HKD Starbucks HK coupons** according to the following criteria:
-* Base (minimum) 25HKD: post ≥1 memories, read 6 memories (in total) in different locations around the campus.
-* Extra 25HKD: post ≥3 memories, read 12 memories (in total) in different locations around the campus.
+* Base (minimum) 25HKD: post ≥1 memories, read ≥6 memories (in total) in different locations around the campus.
+* Extra 25HKD: post ≥3 memories, read ≥12 memories (in total) in different locations around the campus.
 * Extra 25HKD: Join a post-interview for around 30 minutes.
 If you are leaving Hong Kong soon and really need stipends in other currencies, please email the project leader to discuss.
 
