@@ -1,11 +1,27 @@
+- title: AR Scenic Live Streaming
+  description: >
+    A imaginative transformation of unmanned scenic live streaming
+    into lively interactive media, as if the scenery itself was
+    responsive to the viewers.
+  img: projects/arsls.jpg
+  links:
+    publication: https://ieeexplore.ieee.org/document/10765333
+- title: Goosebump Sharing while Watching Online Videos
+  description: >
+    A non-intrusive and EDA-based channel for YouTube viewers to
+    share their goosebump moments in sync with the video playback
+    and visualize the crowd's collective reaction.
+  img: projects/goosebump.jpg
+  links:
+    publication: https://dl.acm.org/doi/10.1145/3613904.3642818
 - title: 'HKUST Course Monitor'
   description: >
     A scraper & visualizer of course quota changes at HKUST
     (on an Oracle PeopleSoft Student Record deployment)
-    during past add-and-drop periods.
+    during past add-and-drop periods. (It is unfortunately not up anymore due to lack of deployment sponsorship.)
   img: projects/course-monitor.jpg
   links:
-    project: https://ustcourse.me/
+    # project: https://ustcourse.me/
     code: https://github.com/fhfuih/Course-Monitor-Web
 - title: 'UST::parser'
   description: >
@@ -15,3 +31,27 @@
   links:
     project: https://zhuangbi.student.ust.hk/ust-parser/
     code: https://github.com/fhfuih/ust-parser
+- title: Yu
+  description: >
+    A design fiction of a mobile app where you can author mobile phone tutorials for your grandparents. (HCI course project)
+  img: projects/yu.png
+  links:
+    blog: https://yellowzeyu.com/en/blog/yu/
+- title: V Gather
+  description: >
+    A design fiction of a social VR product for event icebreaking. (HCI course project)
+  img: projects/v-gather.jpg
+  links:
+    blog: https://yellowzeyu.com/en/blog/v-gather/
+- title: Cool Cook
+  description: >
+    A design fiction of a chatbot as your cooking copilot that gives effective instructions. (HCI course project)
+  img: projects/cool-cook.png
+  links:
+    blog: https://yellowzeyu.com/en/blog/cool-cook/
+- title: More to come...
+  description: >
+    Please see the Publication section for other projects where I am not the leader but
+    have extensively involved in the design, implementation, and user research.
+    Please also request my CV for any secret ongoing projects ;)
+  img: projects/placeholder.jpg

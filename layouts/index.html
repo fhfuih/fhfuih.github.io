@@ -110,11 +110,11 @@
     <div class="container-bleed sticky-top clearfix" id="site-nav-wrapper">
         <nav class="no-wrap" id="site-nav">
             <ul class="horizontal-menu" id="site-nav-list">
-                {{ if $hasPublications }}
-                <li><a href="#publications" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "publications" }}</a></li>
-                {{ end }}
                 {{ if $hasProjects }}
                 <li><a href="#projects" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "projects" }}</a></li>
+                {{ end }}
+                {{ if $hasPublications }}
+                <li><a href="#publications" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "publications" }}</a></li>
                 {{ end }}
                 {{ if $hasExperiences }}
                 <li><a href="#experiences" class="with-icon">{{ partial "helper/icon-sprite" "hash" }}{{ T "experiences" }}</a></li>
@@ -135,6 +135,32 @@
             </ul>
         </nav>
     </div>
+
+    {{ with $.Site.Data.personal.projects }}
+    <section id="projects">
+        <h2>{{T "projects"}}</h2>
+        <div class="projects-gallery gallery">
+        {{ range . }}
+        <article class="project-card card">
+            {{ $img := resources.Get .img }}
+            <img src="{{ $img.RelPermalink }}" class="card-header-img" alt="Showcase image">
+            <div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+                <p class="links">
+                {{ with .links }}
+                    {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
+                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "code" }}Source Code</a>{{ end }}
+                    {{ with .publication }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "script" }}Publication</a>{{ end }}
+                    {{ with .blog }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "writing" }}Blog Post</a>{{ end }}
+                {{ end }}
+                </p>
+            </div>
+        </article>
+        {{ end }}
+        </div>
+    </section>
+    {{ end }}
 
     {{ with $.Site.Data.personal.publications }}
     <section id="publications">
@@ -178,30 +204,6 @@
             </div>
         </article>
         {{ end }}
-    </section>
-    {{ end }}
-
-    {{ with $.Site.Data.personal.projects }}
-    <section id="projects">
-        <h2>{{T "projects"}}</h2>
-        <div class="projects-gallery gallery">
-        {{ range . }}
-        <article class="project-card card">
-            {{ $img := resources.Get .img }}
-            <img src="{{ $img.RelPermalink }}" class="card-header-img" alt="Showcase image">
-            <div>
-                <h3>{{ .title }}</h3>
-                <p>{{ .description }}</p>
-                <p class="links">
-                {{ with .links }}
-                    {{ with .project }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon" "building-pavilion" }}Project Website</a>{{ end }}
-                    {{ with .code }}<a class="link with-icon" href="{{ . }}">{{ partial "helper/icon-sprite" "code" }}Source Code</a>{{ end }}
-                {{ end }}
-                </p>
-            </div>
-        </article>
-        {{ end }}
-        </div>
     </section>
     {{ end }}
 
