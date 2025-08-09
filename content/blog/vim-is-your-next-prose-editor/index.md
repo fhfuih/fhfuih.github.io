@@ -1,5 +1,5 @@
 ---
-title: "(Neo)Vim 是你的下一个写作编辑器（放弃用它写代码吧）"
+title: "(Neo)Vim 是你的下一个文章写作编辑器（放弃用它写代码吧）"
 date: 2025-08-09T00:20:13+08:00
 lang: zh-cn
 categories:
