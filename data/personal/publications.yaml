@@ -1,4 +1,48 @@
 # yaml-language-server: $schema=./publications.schema.json
+- title: "Exploring the Grassroots Understanding and Practices of Collective Memory Co-Contribution in a University Community"
+  short: Grassroots Collective Memory
+  authors:
+    - huang|zeyu
+    - cao|xinyi
+    - deng|yue
+    - li|junze
+    - yuan|kangyu
+    - ma|xiaojuan
+  venue: Proceedings of the ACM on Human-Computer Interaction Vol. 10, No. 1 (PACMHCI '26)
+  year: 2026
+  img: publications/collective-memory.jpg
+  # links:
+  #   arxiv: \#
+- title: "Mixed Reality Scenic Live Streaming for Cultural Heritage: Visual Interactions in a Historic Landscape"
+  short: Mixed Reality Scenic Live Streaming for Cultural Heritage
+  authors:
+    - huang|zeyu
+    - xu|zuyu
+    - zhang|yuanhao
+    - liu|chengzhong
+    - zhao|yanwei
+    - shi|chuhan
+    - zhao|chen
+    - ma|xiaojuan
+  venue: Proceedings of the International Conference on Human-Engaged Computing (ICHEC '25)
+  year: 2025
+  img: publications/mrsls.jpg
+  links:
+    arxiv: https://arxiv.org/abs/2511.17246
+- title: "InsightBridge: Enhancing Empathizing with Users through Real-Time Information Synthesis and Visual Communication"
+  short: InsightBridge
+  authors:
+    - li|junze
+    - zhang|yue
+    - zheng|chengbo
+    - liu|dingdong
+    - huang|zeyu
+    - ma|xiaojuan
+  venue: Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI '25)
+  year: 2025
+  img: publications/insightbridge.jpg
+  links:
+    doi: https://doi.org/10.1145/3706598.3713640
 - title: "Be There, Be Together, Be Streamed! AR Scenic Live-Streaming for an Interactive and Collective Experience"
   short: AR Scenic Live-Streaming
   authors:
@@ -110,9 +154,7 @@
     doi: https://doi.org/10.1145/3544548.3580932
     code: https://github.com/Zascc/CoArgue-CHI2023
     presentation: https://www.youtube.com/watch?v=IHpk1gJ8WYs
-- title:
-    "PlanHelper: Supporting Activity Plan Construction with Answer Posts in Community-based
-    QA Platforms"
+- title: "PlanHelper: Supporting Activity Plan Construction with Answer Posts in Community-based QA Platforms"
   short: PlanHelper
   authors:
     - liu|chengzhong
@@ -129,9 +171,7 @@
     pdf: https://zhenhuipeng.com/docs/cscw_2022_planhelper.pdf
     code: https://github.com/fhfuih/PlanHelper-CSCW2022
     presentation: https://youtube.com/watch?v=QKKAxLa8-mU&feature=shares
-- title:
-    "MetaMap: Supporting Visual Metaphor Ideation through Multi-dimensional Example-based
-    Exploration"
+- title: "MetaMap: Supporting Visual Metaphor Ideation through Multi-dimensional Example-based Exploration"
   short: MetaMap
   authors:
     - kang|youwen
