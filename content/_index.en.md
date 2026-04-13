@@ -7,9 +7,9 @@ lang: en
 My name is *Huang, Zeyu* (<ruby>黄<rp>(</rp><rt>huáng</rt><rp>)</rp>
 泽<rp>(</rp><rt>zé</rt><rp>)</rp>宇<rp>(</rp><rt>yǔ</rt><rp>)</rp></ruby>).
 In Chinese, surnames come first, so you can call me Zeyu.
-I am a PhD candidate in CSE at the [HCI Lab](https://hci.cse.ust.hk) of [HKUST](https://hkust.edu.hk),
+I received my PhD in CSE at the [HCI Lab](https://hci.cse.ust.hk) of [HKUST](https://hkust.edu.hk),
 supervised by [Prof. Xiaojuan Ma](https://www.cse.ust.hk/~mxj/).
-Currently, I have attended a research visit to Georgia Institute of Technology, at the [Future Feelings Lab](https://sites.gatech.edu/futurefeelings/) directed by [Prof. Noura Howell](https://nourahowell.com/) in the Digital Media department.
+I have attended a research visit to Georgia Institute of Technology, at the [Future Feelings Lab](https://sites.gatech.edu/futurefeelings/) directed by [Prof. Noura Howell](https://nourahowell.com/) at [the School of Literature, Media, and Communication](https://lmc.gatech.edu/).
 Apart from my main research direction, I also do some musical acoustic studies following [Prof. Andrew Horner](https://cse.hkust.edu.hk/~horner/).
 Prior to that, I also earned my Bachelor's Degree in CS and MATH at HKUST.
 

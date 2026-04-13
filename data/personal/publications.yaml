@@ -1,4 +1,28 @@
 # yaml-language-server: $schema=./publications.schema.json
+- title: "HeartSway: Exploring Biodata as Poetic Traces in Public Space"
+  short: HeartSway
+  authors:
+    - huang|zeyu
+    - guo|zhifan
+    - li|xingyu
+    - ma|xiaojuan
+    - noura
+  venue: Proceedings of the 2026 ACM Designing Interactive Systems Conference (DIS '26)
+  year: 2026
+  img: publications/heartsway.jpg
+- title: "Moving Phones, Active Peers: Exploring the Effect of Animated Phones as Facilitators in In-Person Group Discussion"
+  short: "Moving Phones, Active Peers"
+  authors:
+    - pan|ziqi
+    - liu|ziqi
+    - zhang|jinhan
+    - huang|zeyu
+    - ma|xiaojuan
+  venue: Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26)
+  year: 2026
+  img: publications/moving-phones.jpg
+  links:
+    arxiv: https://arxiv.org/abs/2603.10394
 - title: "Exploring the Grassroots Understanding and Practices of Collective Memory Co-Contribution in a University Community"
   short: Grassroots Collective Memory
   authors:
@@ -11,8 +35,9 @@
   venue: Proceedings of the ACM on Human-Computer Interaction Vol. 10, No. 1 (PACMHCI '26)
   year: 2026
   img: publications/collective-memory.jpg
-  # links:
-  #   arxiv: \#
+  links:
+    arxiv: https://arxiv.org/abs/2512.08787
+    doi: https://doi.org/10.1145/3799444
 - title: "Mixed Reality Scenic Live Streaming for Cultural Heritage: Visual Interactions in a Historic Landscape"
   short: Mixed Reality Scenic Live Streaming for Cultural Heritage
   authors:
