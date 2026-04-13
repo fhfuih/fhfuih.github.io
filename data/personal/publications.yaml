@@ -10,19 +10,36 @@
   venue: Proceedings of the 2026 ACM Designing Interactive Systems Conference (DIS '26)
   year: 2026
   img: publications/heartsway.jpg
-- title: "Moving Phones, Active Peers: Exploring the Effect of Animated Phones as Facilitators in In-Person Group Discussion"
-  short: "Moving Phones, Active Peers"
+- title: "From Human Pragmatic Language Skills to Conversational Agent Design: A Systematic Review of Transfer Strategies"
+  short: "Language Skills to Agent Design"
   authors:
-    - pan|ziqi
-    - liu|ziqi
-    - zhang|jinhan
+    - hu|jiaxiong
+    - yao|xiwen
     - huang|zeyu
+    - liang|danxuan
+    - yang|dongjie
+    - liu|dingdong
+    - li|junze
+    - zhang|yuanhao
     - ma|xiaojuan
   venue: Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26)
   year: 2026
-  img: publications/moving-phones.jpg
+  img: publications/CA-review.jpg
   links:
-    arxiv: https://arxiv.org/abs/2603.10394
+    doi: 10.1145/3772318.3792787
+# - title: "Moving Phones, Active Peers: Exploring the Effect of Animated Phones as Facilitators in In-Person Group Discussion"
+#   short: "Moving Phones, Active Peers"
+#   authors:
+#     - pan|ziqi
+#     - liu|ziqi
+#     - zhang|jinhan
+#     - huang|zeyu
+#     - ma|xiaojuan
+#   venue: arXiv
+#   year: 2026
+#   img: publications/moving-phones.jpg
+#   links:
+#     arxiv: https://arxiv.org/abs/2603.10394
 - title: "Exploring the Grassroots Understanding and Practices of Collective Memory Co-Contribution in a University Community"
   short: Grassroots Collective Memory
   authors:
