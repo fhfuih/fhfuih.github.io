@@ -10,6 +10,9 @@
   venue: Proceedings of the 2026 ACM Designing Interactive Systems Conference (DIS '26)
   year: 2026
   img: publications/heartsway.jpg
+  links:
+    arxiv: https://arxiv.org/abs/2604.11701
+    doi: https://doi.org/10.1145/3800645.3813022
 - title: "From Human Pragmatic Language Skills to Conversational Agent Design: A Systematic Review of Transfer Strategies"
   short: "Language Skills to Agent Design"
   authors:
@@ -71,6 +74,7 @@
   img: publications/mrsls.jpg
   links:
     arxiv: https://arxiv.org/abs/2511.17246
+    doi: https://doi.org/10.1145/3786995.3786999
 - title: "InsightBridge: Enhancing Empathizing with Users through Real-Time Information Synthesis and Visual Communication"
   short: InsightBridge
   authors:
